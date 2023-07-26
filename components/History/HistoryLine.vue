@@ -78,7 +78,7 @@ export default {
       const updateCurrent = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
         entries.forEach((entry) => {
           const _currentLink = entry.target.parentElement?.parentElement
-          if (entry.isIntersecting && entry.intersectionRatio > 0.9 && _currentLink) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.8 && _currentLink) {
             console.log(_currentLink.id);
 
             debounce(() => {
@@ -113,17 +113,21 @@ export default {
   display: flex;
   position: relative;
   flex-wrap: nowrap;
-
+  z-index: 5;
   &__row {
     position: relative;
     width: 100%;
   }
 
   &__pagination {
-    display: block;
+    display: flex;
     position: fixed;
     left: 60px;
     z-index: 100;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    height: 100vh;
 
     @media screen and (max-width:1350px) {
       display: none;

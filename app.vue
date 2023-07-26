@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #F2F5FF;
+  color: $text-white;
   font-family: 'Manrope', sans-serif;
   scroll-behavior: smooth;
 

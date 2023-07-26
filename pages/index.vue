@@ -36,7 +36,7 @@ export default {
   }
 
   &__title {
-    color: var(--text-white, #F2F5FF);
+    color: $text-white;
     font-size: 72px;
     font-style: normal;
     font-weight: 400;
@@ -44,7 +44,7 @@ export default {
     margin-bottom: 12px;
 
     @media screen and (max-width:1000px) {
-      color: var(--unnamed, #FAFBFF);
+      color: $mobile-text-white;
       font-size: 54px;
     }
 
@@ -57,14 +57,14 @@ export default {
   }
 
   &__description {
-    color: var(--text-white, #F2F5FF);
+    color: $text-white;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
 
     @media screen and (max-width:1000px) {
-      color: var(--unnamed, #FAFBFF);
+      color: $mobile-text-white;
     }
 
     @media screen and (max-width:550px) {
@@ -78,5 +78,29 @@ export default {
   position: relative;
   display: block;
 
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    z-index: 1;
+    position: fixed;
+    width: 756px;
+    height: 784px;
+    border-radius: 784px;
+    filter: blur(175px);
+
+  }
+
+  &::after {
+    background: rgba(0, 87, 255, 0.08);
+    top: -330px;
+    left: 90px;
+  }
+
+  &::before {
+    top: 420px;
+    right: -90px;
+    background: rgba(0, 87, 255, 0.15);
+  }
 }
 </style>

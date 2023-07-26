@@ -75,9 +75,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--unnamed, #ECF1FF);
   position: relative;
   margin-bottom: 24px;
+
+  * {
+    color: $history-item-color;
+
+  }
 
   @media screen and (max-width:1350px) {
     align-items: flex-start;
@@ -123,26 +127,32 @@ export default {
 
   &.--reversed {
     .history-item__step {
+      right: 1px;
+
       @media screen and (max-width:1350px) {
-        right: 0px;
+        right: 1.1px;
       }
 
       @media screen and (max-width:1000px) {
-        right: -.9px;
+        right: 0.5px;
+      }
+
+      @media screen and (max-width:550px) {
+        left: 4px;
       }
     }
 
     &.--muted {
       .history-item__step {
-        right: -.5px;
+        right: 1px;
         top: 2px;
 
         @media screen and (max-width:1350px) {
-          right: -4px;
+          right: -3px;
         }
 
         @media screen and (max-width:1000px) {
-          right: -4.6px;
+          right: -3.5px;
         }
       }
     }
@@ -154,14 +164,36 @@ export default {
       color: var(--unnamed, #6176AD);
     }
 
+    &.--reversed {
+      .history-item__step {
+        @media screen and (max-width:550px) {
+          width: 8px;
+          height: 8px;
+          left: 6px;
+          right: 0 !important;
+        }
+      }
+
+      .history-item__line.--main {
+        @media screen and (max-width: 550px) {
+          right: 2px;
+        }
+      }
+    }
+
     .history-item__step {
       width: 16px;
       height: 16px;
 
+      @media screen and (max-width:1000px) {
+        right: -5px;
+      }
+
       @media screen and (max-width:550px) {
-        width: 9px;
-        height: 9px;
-        left: 8px;
+        width: 8px;
+        height: 8px;
+        left: 6px;
+        right: 0 !important;
       }
 
       &::after {
@@ -184,7 +216,7 @@ export default {
         position: absolute;
         content: "";
         inset: 0;
-        border-radius: 100%;
+        border-radius: 111px 96px;
         background: rgba(86, 144, 255, 0.13);
         filter: blur(75px);
       }
@@ -198,6 +230,8 @@ export default {
       &::after {
         content: "";
         display: block;
+        width: 287px;
+        height: 330px;
         position: absolute;
         border-radius: 330px;
         background: rgba(0, 87, 255, 0.17);
@@ -210,12 +244,13 @@ export default {
     &:not(.--reversed) {
       .history-item__step {
         @media screen and (max-width:1350px) {
-          right: -1px;
+          right: -2px;
         }
 
         @media screen and (max-width:1000px) {
-          right: 0;
+          right: -1px;
         }
+
       }
     }
   }
@@ -231,7 +266,7 @@ export default {
     position: relative;
     width: 24px;
     height: 24px;
-    right: 1px;
+    // right: 1px;
     top: 1px;
     z-index: 5;
 
@@ -248,7 +283,7 @@ export default {
 
     @media screen and (max-width:1350px) {
 
-      right: -4.5px;
+      right: -6px;
     }
 
     @media screen and (max-width:1000px) {
@@ -256,9 +291,9 @@ export default {
     }
 
     @media screen and (max-width:550px) {
-      width: 14px;
-      height: 14px;
-      left: 5px;
+      width: 15px;
+      height: 15px;
+      left: 3px;
     }
   }
 
@@ -268,11 +303,23 @@ export default {
     display: flex;
     justify-content: center;
 
+
     &.--main {
       position: relative;
       z-index: 2;
       display: flex;
       justify-content: flex-end;
+      width: calc(100% + 1px);
+      right: -1px;
+
+      @media screen and (max-width:1350px) {
+        width: 4px;
+      }
+
+      @media screen and (max-width:550px) {
+        width: 3px;
+        right: 3px;
+      }
 
       .svg {
         display: flex;
@@ -280,10 +327,12 @@ export default {
         position: relative;
         justify-content: center;
         width: 3px;
+
         @media screen and (max-width: 1350px) {
           right: -11px;
           height: 100%;
         }
+
         @media screen and (max-width: 550px) {
           height: 100%;
         }
@@ -311,7 +360,7 @@ export default {
       top: 20px;
       z-index: 1;
       display: flex;
-      right: 2px;
+      right: 1px;
       justify-content: flex-start;
       max-width: 50%;
       min-width: 578px;
@@ -325,6 +374,10 @@ export default {
         left: 8px;
       }
 
+      @media screen and (max-width:550px) {
+        min-width: inherit;
+        left: 6px;
+      }
 
 
       .svg {
@@ -362,16 +415,21 @@ export default {
       flex-direction: row-reverse;
 
       .--main {
+        right: 1px;
         justify-content: flex-start;
+      }
+
+      .history-item__step {
+        right: 1px;
       }
 
       .--sub {
         flex-direction: row-reverse;
         right: 0;
-        left: 2px;
+        left: 1px;
 
         @media screen and (max-width:1350px) {
-          left: 8px;
+          left: 7px;
         }
       }
 
@@ -390,17 +448,17 @@ export default {
   &__year {
     text-shadow: 0px 0px 4px rgba(227, 242, 255, 0.35);
     font-size: 46px;
-    color: var(--unnamed, #ECF1FF);
     font-style: normal;
     font-weight: 400;
     line-height: 60px;
     text-align: center;
+
     @media screen and (max-width:1000px) {
-      color: var(--unnamed, #ECF1FF);
       font-size: 40px;
       font-weight: 400;
       line-height: 135%;
     }
+
     @media screen and (max-width:550px) {
       font-size: 16px;
       text-shadow: none;
@@ -411,7 +469,6 @@ export default {
     text-align: center;
     font-size: 20px;
     font-weight: 600;
-    color: var(--unnamed, #ECF1FF);
     line-height: 28px;
     font-style: normal;
 
@@ -445,5 +502,4 @@ export default {
     }
   }
 
-}
-</style>
+}</style>

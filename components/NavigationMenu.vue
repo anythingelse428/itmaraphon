@@ -52,7 +52,6 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  // overflow: hidden;
   background: rgba(17, 25, 56, 0.01);
   backdrop-filter: blur(3.5px);
   display: flex;
@@ -73,8 +72,6 @@ export default {
   @media screen and (max-width:1000px) {
     padding: 15px 90px 15px 90px;
     justify-content: space-between;
-
-
     &-toggler {
       display: block;
       width: 54px;
@@ -117,47 +114,48 @@ export default {
       position: absolute;
       inset: 0;
       height: 111vh;
-      padding-bottom: 0;
       padding: 165px 99px;
+      padding-bottom: 0;
       background: #121B3E;
-
-      .nav-links {
-        position: relative;
-        inset: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: flex-start;
-        justify-content: flex-start;
-        gap: 42px 25%;
-        height: 14em;
-        flex-wrap: wrap;
-
-        .nav-link {
-          color: var(--unnamed, #ECF1FF);
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-        }
+      &:not(.active) {
+        margin-top: -150vh;
       }
     }
 
-    &-collapse:not(.active) {
-      margin-top: -150vh;
+    &-collapse.active>&-links {
+      position: relative;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: flex-start;
+      justify-content: flex-start;
+      gap: 42px 25%;
+      height: 14em;
+      flex-wrap: wrap;
 
+      .nav-link {
+        color: $mobile-nav-link-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
     }
 
-    &-collapse.active {
-      margin-top: 0;
-      top: 0px;
-      z-index: 5;
-
-
-    }
   }
 
   @media screen and (max-width:800px) {
     padding: 11px 10px;
+
+    &-collapse {
+      padding: 110px 12px;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+    &-collapse.active>&-links {
+      gap: 24px 5%;
+    }
   }
 
   &.sticky {
@@ -194,17 +192,22 @@ export default {
   }
 
   &-link {
-    color: var(--nav-link-color, #FAFBFF);
+    color: $nav-link-color;
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
-
+    transition: all .1s;
+    cursor: pointer;
+    &:hover{
+      color: #b7bbc4;
+    }
     @media screen and (max-width: 1200px) {
-      color: var(--unnamed, #ECF1FF);
+      color: $mobile-nav-link-color;
       font-size: 16px;
       line-height: 24px;
     }
+
   }
 
   &-tools {
