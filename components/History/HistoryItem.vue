@@ -196,7 +196,7 @@ export default {
         right: 0 !important;
       }
 
-      &::after {
+      &::before {
         background: #7190FF;
         filter: drop-shadow(0px 0px 19px #3562FF);
       }
@@ -212,7 +212,7 @@ export default {
       top: -110px;
       left: -90px;
 
-      &::after {
+      &::before {
         position: absolute;
         content: "";
         inset: 0;
@@ -227,7 +227,7 @@ export default {
       height: 330px;
       position: relative;
 
-      &::after {
+      &::before {
         content: "";
         display: block;
         width: 287px;
@@ -270,7 +270,7 @@ export default {
     top: 1px;
     z-index: 5;
 
-    &::after {
+    &::before {
       position: absolute;
       content: '';
       z-index: 2;
@@ -337,7 +337,7 @@ export default {
           height: 100%;
         }
 
-        &::after {
+        &::before {
           display: block;
           position: relative;
           height: 100%;
@@ -395,7 +395,7 @@ export default {
           height: 50px;
         }
 
-        &::after {
+        &::before {
           display: block;
           position: relative;
           content: url('/assets/sub-line.svg');

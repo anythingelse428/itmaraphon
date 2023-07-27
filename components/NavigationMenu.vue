@@ -74,35 +74,22 @@ export default {
   @media screen and (max-width:1000px) {
     padding: 15px 90px 15px 90px;
     justify-content: space-between;
+
     &-toggler {
       display: block;
       width: 54px;
       height: 54px;
 
-
-      &::after {
+      &::before {
         position: absolute;
         inset: 0;
-        opacity: 1;
         display: block;
         content: url('/assets/icons/burger.svg');
       }
 
-      &::before {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        display: block;
-        content: url('/assets/icons/x.svg');
-      }
-
       &.active {
-        &::after {
-          opacity: 0;
-        }
-
         &::before {
-          opacity: 1;
+          content: url('/assets/icons/x.svg');
         }
       }
     }
@@ -119,6 +106,7 @@ export default {
       padding: 165px 99px;
       padding-bottom: 0;
       background: #121B3E;
+
       &:not(.active) {
         margin-top: -150vh;
       }
@@ -201,9 +189,11 @@ export default {
     line-height: 130%;
     transition: all .1s;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       color: #b7bbc4;
     }
+
     @media screen and (max-width: 1200px) {
       color: $mobile-nav-link-color;
       font-size: 16px;
