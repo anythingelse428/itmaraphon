@@ -1,6 +1,11 @@
 declare global {
+<<<<<<< Updated upstream
   const __buildAssetsURL: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nuxt/dist/core/runtime/nitro/paths')['buildAssetsURL']
   const __publicAssetsURL: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nuxt/dist/core/runtime/nitro/paths')['publicAssetsURL']
+=======
+  const __buildAssetsURL: typeof import('C:/stuff/it-maraphon/node_modules/nuxt/dist/core/runtime/nitro/paths')['buildAssetsURL']
+  const __publicAssetsURL: typeof import('C:/stuff/it-maraphon/node_modules/nuxt/dist/core/runtime/nitro/paths')['publicAssetsURL']
+>>>>>>> Stashed changes
   const appendCorsHeaders: typeof import('h3')['appendCorsHeaders']
   const appendCorsPreflightHeaders: typeof import('h3')['appendCorsPreflightHeaders']
   const appendHeader: typeof import('h3')['appendHeader']
@@ -8,8 +13,13 @@ declare global {
   const appendResponseHeader: typeof import('h3')['appendResponseHeader']
   const appendResponseHeaders: typeof import('h3')['appendResponseHeaders']
   const assertMethod: typeof import('h3')['assertMethod']
+<<<<<<< Updated upstream
   const cachedEventHandler: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['cachedEventHandler']
   const cachedFunction: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['cachedFunction']
+=======
+  const cachedEventHandler: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['cachedEventHandler']
+  const cachedFunction: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['cachedFunction']
+>>>>>>> Stashed changes
   const callNodeListener: typeof import('h3')['callNodeListener']
   const clearSession: typeof import('h3')['clearSession']
   const createApp: typeof import('h3')['createApp']
@@ -18,6 +28,7 @@ declare global {
   const createEvent: typeof import('h3')['createEvent']
   const createRouter: typeof import('h3')['createRouter']
   const defaultContentType: typeof import('h3')['defaultContentType']
+<<<<<<< Updated upstream
   const defineAppConfig: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nuxt/dist/core/runtime/nitro/config')['defineAppConfig']
   const defineCachedEventHandler: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['defineCachedEventHandler']
   const defineCachedFunction: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['defineCachedFunction']
@@ -27,6 +38,17 @@ declare global {
   const defineNodeListener: typeof import('h3')['defineNodeListener']
   const defineNodeMiddleware: typeof import('h3')['defineNodeMiddleware']
   const defineRenderHandler: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['defineRenderHandler']
+=======
+  const defineAppConfig: typeof import('C:/stuff/it-maraphon/node_modules/nuxt/dist/core/runtime/nitro/config')['defineAppConfig']
+  const defineCachedEventHandler: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['defineCachedEventHandler']
+  const defineCachedFunction: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['defineCachedFunction']
+  const defineEventHandler: typeof import('h3')['defineEventHandler']
+  const defineLazyEventHandler: typeof import('h3')['defineLazyEventHandler']
+  const defineNitroPlugin: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['defineNitroPlugin']
+  const defineNodeListener: typeof import('h3')['defineNodeListener']
+  const defineNodeMiddleware: typeof import('h3')['defineNodeMiddleware']
+  const defineRenderHandler: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['defineRenderHandler']
+>>>>>>> Stashed changes
   const deleteCookie: typeof import('h3')['deleteCookie']
   const dynamicEventHandler: typeof import('h3')['dynamicEventHandler']
   const eventHandler: typeof import('h3')['eventHandler']
@@ -48,7 +70,11 @@ declare global {
   const getResponseHeaders: typeof import('h3')['getResponseHeaders']
   const getResponseStatus: typeof import('h3')['getResponseStatus']
   const getResponseStatusText: typeof import('h3')['getResponseStatusText']
+<<<<<<< Updated upstream
   const getRouteRules: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['getRouteRules']
+=======
+  const getRouteRules: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['getRouteRules']
+>>>>>>> Stashed changes
   const getRouterParam: typeof import('h3')['getRouterParam']
   const getRouterParams: typeof import('h3')['getRouterParams']
   const getSession: typeof import('h3')['getSession']
@@ -62,7 +88,11 @@ declare global {
   const isPreflightRequest: typeof import('h3')['isPreflightRequest']
   const isStream: typeof import('h3')['isStream']
   const lazyEventHandler: typeof import('h3')['lazyEventHandler']
+<<<<<<< Updated upstream
   const nitroPlugin: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['nitroPlugin']
+=======
+  const nitroPlugin: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['nitroPlugin']
+>>>>>>> Stashed changes
   const parseCookies: typeof import('h3')['parseCookies']
   const promisifyNodeListener: typeof import('h3')['promisifyNodeListener']
   const proxyRequest: typeof import('h3')['proxyRequest']
@@ -89,6 +119,7 @@ declare global {
   const toNodeListener: typeof import('h3')['toNodeListener']
   const unsealSession: typeof import('h3')['unsealSession']
   const updateSession: typeof import('h3')['updateSession']
+<<<<<<< Updated upstream
   const useAppConfig: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['useAppConfig']
   const useBase: typeof import('h3')['useBase']
   const useNitroApp: typeof import('C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime')['useNitroApp']
@@ -98,6 +129,17 @@ declare global {
   const writeEarlyHints: typeof import('h3')['writeEarlyHints']
 }
 export { defineCachedFunction, defineCachedEventHandler, cachedFunction, cachedEventHandler, useRuntimeConfig, useStorage, useNitroApp, defineNitroPlugin, nitroPlugin, defineRenderHandler, getRouteRules, useAppConfig } from 'C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/nitropack/dist/runtime';
+=======
+  const useAppConfig: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['useAppConfig']
+  const useBase: typeof import('h3')['useBase']
+  const useNitroApp: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['useNitroApp']
+  const useRuntimeConfig: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['useRuntimeConfig']
+  const useSession: typeof import('h3')['useSession']
+  const useStorage: typeof import('C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime')['useStorage']
+  const writeEarlyHints: typeof import('h3')['writeEarlyHints']
+}
+export { defineCachedFunction, defineCachedEventHandler, cachedFunction, cachedEventHandler, useRuntimeConfig, useStorage, useNitroApp, defineNitroPlugin, nitroPlugin, defineRenderHandler, getRouteRules, useAppConfig } from 'C:/stuff/it-maraphon/node_modules/nitropack/dist/runtime';
+>>>>>>> Stashed changes
 export { appendCorsHeaders, appendCorsPreflightHeaders, appendHeader, appendHeaders, appendResponseHeader, appendResponseHeaders, assertMethod, callNodeListener, clearSession, createApp, createAppEventHandler, createError, createEvent, createRouter, defaultContentType, defineEventHandler, defineLazyEventHandler, defineNodeListener, defineNodeMiddleware, deleteCookie, dynamicEventHandler, eventHandler, fetchWithEvent, fromNodeMiddleware, getCookie, getHeader, getHeaders, getMethod, getProxyRequestHeaders, getQuery, getRequestHeader, getRequestHeaders, getRequestHost, getRequestPath, getRequestProtocol, getRequestURL, getResponseHeader, getResponseHeaders, getResponseStatus, getResponseStatusText, getRouterParam, getRouterParams, getSession, handleCacheHeaders, handleCors, isCorsOriginAllowed, isError, isEvent, isEventHandler, isMethod, isPreflightRequest, isStream, lazyEventHandler, parseCookies, promisifyNodeListener, proxyRequest, readBody, readMultipartFormData, readRawBody, sanitizeStatusCode, sanitizeStatusMessage, sealSession, send, sendError, sendNoContent, sendProxy, sendRedirect, sendStream, setCookie, setHeader, setHeaders, setResponseHeader, setResponseHeaders, setResponseStatus, splitCookiesString, toEventHandler, toNodeListener, unsealSession, updateSession, useBase, useSession, writeEarlyHints } from 'h3';
 export { buildAssetsURL as __buildAssetsURL, publicAssetsURL as __publicAssetsURL } from '../../node_modules/nuxt/dist/core/runtime/nitro/paths';
 export { defineAppConfig } from '../../node_modules/nuxt/dist/core/runtime/nitro/config';

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { reactive, hasInjectionContext, getCurrentInstance, toRef, isRef, inject, nextTick, shallowRef, shallowReactive, isReadonly, version, unref, ref, watchEffect, watch, isShallow, isReactive, toRaw, h, defineComponent, computed, Suspense, mergeProps, Transition, provide, withCtx, createVNode, useSSRContext, defineAsyncComponent, onErrorCaptured, onServerPrefetch, resolveDynamicComponent, createApp } from "vue";
 import { $fetch } from "ofetch";
 import { useRuntimeConfig as useRuntimeConfig$1 } from "#internal/nitro";
@@ -1065,3 +1066,6 @@ export {
   useRouter as u
 };
 //# sourceMappingURL=server.mjs.map
+=======
+export { default } from "file:///C:/stuff/it-maraphon/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+>>>>>>> Stashed changes

@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "layouts/default.css": {
     "resourceType": "style",
     "file": "default.2cb01fce.css",
@@ -103,5 +104,19 @@
   "index.be212189.css": {
     "file": "index.be212189.css",
     "resourceType": "style"
+=======
+  "@vite/client": {
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "C:/stuff/it-maraphon/node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "isEntry": true,
+    "file": "C:/stuff/it-maraphon/node_modules/nuxt/dist/app/entry.js"
+>>>>>>> Stashed changes
   }
 }

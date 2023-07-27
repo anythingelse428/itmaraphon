@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 export default {
   "layouts/default.css": {
     "resourceType": "style",
@@ -105,3 +106,6 @@ export default {
     "resourceType": "style"
   }
 }
+=======
+export { default } from "file:///C:/stuff/it-maraphon/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+>>>>>>> Stashed changes

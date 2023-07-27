@@ -9,7 +9,11 @@
     "skipLibCheck": true,
     "strict": true,
     "allowJs": true,
+<<<<<<< Updated upstream
     "baseUrl": "C:/Users/anythingelse428/Documents/GitHub/itmaraphon",
+=======
+    "baseUrl": "C:/stuff/it-maraphon",
+>>>>>>> Stashed changes
     "noEmit": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
@@ -18,6 +22,7 @@
     ],
     "paths": {
       "~": [
+<<<<<<< Updated upstream
         "C:/Users/anythingelse428/Documents/GitHub/itmaraphon"
       ],
       "~/*": [
@@ -73,6 +78,63 @@
       ],
       "#components": [
         "C:/Users/anythingelse428/Documents/GitHub/itmaraphon/.nuxt/components"
+=======
+        "C:/stuff/it-maraphon"
+      ],
+      "~/*": [
+        "C:/stuff/it-maraphon/*"
+      ],
+      "@": [
+        "C:/stuff/it-maraphon"
+      ],
+      "@/*": [
+        "C:/stuff/it-maraphon/*"
+      ],
+      "~~": [
+        "C:/stuff/it-maraphon"
+      ],
+      "~~/*": [
+        "C:/stuff/it-maraphon/*"
+      ],
+      "@@": [
+        "C:/stuff/it-maraphon"
+      ],
+      "@@/*": [
+        "C:/stuff/it-maraphon/*"
+      ],
+      "assets": [
+        "C:/stuff/it-maraphon/assets"
+      ],
+      "public": [
+        "C:/stuff/it-maraphon/public"
+      ],
+      "public/*": [
+        "C:/stuff/it-maraphon/public/*"
+      ],
+      "#app": [
+        "C:/stuff/it-maraphon/node_modules/nuxt/dist/app"
+      ],
+      "#app/*": [
+        "C:/stuff/it-maraphon/node_modules/nuxt/dist/app/*"
+      ],
+      "vue-demi": [
+        "C:/stuff/it-maraphon/node_modules/nuxt/dist/app/compat/vue-demi"
+      ],
+      "#vue-router": [
+        "C:/stuff/it-maraphon/.nuxt/vue-router"
+      ],
+      "#imports": [
+        "C:/stuff/it-maraphon/.nuxt/imports"
+      ],
+      "#build": [
+        "C:/stuff/it-maraphon/.nuxt"
+      ],
+      "#build/*": [
+        "C:/stuff/it-maraphon/.nuxt/*"
+      ],
+      "#components": [
+        "C:/stuff/it-maraphon/.nuxt/components"
+>>>>>>> Stashed changes
       ]
     }
   },
@@ -80,6 +142,7 @@
     "./nuxt.d.ts",
     "../**/*",
     "../**/*",
+<<<<<<< Updated upstream
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon",
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon/*",
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon",
@@ -88,6 +151,16 @@
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon/*",
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon",
     "C:/Users/anythingelse428/Documents/GitHub/itmaraphon/*"
+=======
+    "C:/stuff/it-maraphon",
+    "C:/stuff/it-maraphon/*",
+    "C:/stuff/it-maraphon",
+    "C:/stuff/it-maraphon/*",
+    "C:/stuff/it-maraphon",
+    "C:/stuff/it-maraphon/*",
+    "C:/stuff/it-maraphon",
+    "C:/stuff/it-maraphon/*"
+>>>>>>> Stashed changes
   ],
   "exclude": [
     "../dist",

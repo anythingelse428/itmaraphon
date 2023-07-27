@@ -1,8 +1,16 @@
+<<<<<<< Updated upstream
 import { createRenderer } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/vue-bundle-renderer/dist/runtime.mjs';
 import { eventHandler, setResponseStatus, getQuery, createError, appendResponseHeader } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/h3/dist/index.mjs';
 import { stringify, uneval } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/devalue/index.js';
 import { joinURL, withoutTrailingSlash } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/vue/server-renderer/index.mjs';
+=======
+import { createRenderer } from 'file://C:/stuff/it-maraphon/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { eventHandler, setResponseStatus, getQuery, createError, appendResponseHeader } from 'file://C:/stuff/it-maraphon/node_modules/h3/dist/index.mjs';
+import { stringify, uneval } from 'file://C:/stuff/it-maraphon/node_modules/devalue/index.js';
+import { joinURL, withoutTrailingSlash } from 'file://C:/stuff/it-maraphon/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file://C:/stuff/it-maraphon/node_modules/vue/server-renderer/index.mjs';
+>>>>>>> Stashed changes
 import { u as useNitroApp, a as useRuntimeConfig, g as getRouteRules } from './nitro/nitro-prerenderer.mjs';
 
 function defineRenderHandler(handler) {

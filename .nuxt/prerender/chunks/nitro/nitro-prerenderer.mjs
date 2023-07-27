@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/node-fetch-native/dist/polyfill.mjs';
 import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseStatus, setResponseHeader, getRequestHeaders, createError, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/h3/dist/index.mjs';
 import { createFetch as createFetch$1, Headers } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/ofetch/dist/node.mjs';
@@ -15,6 +16,25 @@ import { toRouteMatcher, createRouter } from 'file://C:/Users/anythingelse428/Do
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'file://C:/Users/anythingelse428/Documents/GitHub/itmaraphon/node_modules/pathe/dist/index.mjs';
+=======
+globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import 'file://C:/stuff/it-maraphon/node_modules/node-fetch-native/dist/polyfill.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseStatus, setResponseHeader, getRequestHeaders, createError, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler } from 'file://C:/stuff/it-maraphon/node_modules/h3/dist/index.mjs';
+import { createFetch as createFetch$1, Headers } from 'file://C:/stuff/it-maraphon/node_modules/ofetch/dist/node.mjs';
+import destr from 'file://C:/stuff/it-maraphon/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://C:/stuff/it-maraphon/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/stuff/it-maraphon/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file://C:/stuff/it-maraphon/node_modules/scule/dist/index.mjs';
+import { klona } from 'file://C:/stuff/it-maraphon/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file://C:/stuff/it-maraphon/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://C:/stuff/it-maraphon/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withLeadingSlash, withoutTrailingSlash } from 'file://C:/stuff/it-maraphon/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/stuff/it-maraphon/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/stuff/it-maraphon/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/stuff/it-maraphon/node_modules/radix3/dist/index.mjs';
+import { promises } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve } from 'file://C:/stuff/it-maraphon/node_modules/pathe/dist/index.mjs';
+>>>>>>> Stashed changes
 
 const inlineAppConfig = {};
 
@@ -108,7 +128,11 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
+<<<<<<< Updated upstream
 const serverAssets = [{"baseName":"server","dir":"C:/Users/anythingelse428/Documents/GitHub/itmaraphon/server/assets"}];
+=======
+const serverAssets = [{"baseName":"server","dir":"C:/stuff/it-maraphon/server/assets"}];
+>>>>>>> Stashed changes
 
 const assets$1 = createStorage();
 
@@ -120,10 +144,17 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
+<<<<<<< Updated upstream
 storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\anythingelse428\\Documents\\GitHub\\itmaraphon","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\anythingelse428\\Documents\\GitHub\\itmaraphon\\server","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\anythingelse428\\Documents\\GitHub\\itmaraphon\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\anythingelse428\\Documents\\GitHub\\itmaraphon\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+=======
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\stuff\\it-maraphon","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\stuff\\it-maraphon\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\stuff\\it-maraphon\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\stuff\\it-maraphon\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+>>>>>>> Stashed changes
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -526,161 +557,253 @@ const assets = {
   "/favicon.ico": {
     "type": "image/vnd.microsoft.icon",
     "etag": "\"10be-n8egyE9tcb7sKGr/pYCaQ4uWqxI\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.742Z",
+=======
+    "mtime": "2023-07-15T07:46:22.000Z",
+>>>>>>> Stashed changes
     "size": 4286,
     "path": "../../.output/public/favicon.ico"
   },
   "/assets/logo.svg": {
     "type": "image/svg+xml",
     "etag": "\"2262-KUMqHpEpb3+3JjGKQcirVRmASvM\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.739Z",
+=======
+    "mtime": "2023-07-19T09:58:13.486Z",
+>>>>>>> Stashed changes
     "size": 8802,
     "path": "../../.output/public/assets/logo.svg"
   },
   "/assets/main-line-md.svg": {
     "type": "image/svg+xml",
     "etag": "\"1f0-eP6nnF7TYVBtShwzYDBL8DFfwwI\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.739Z",
+=======
+    "mtime": "2023-07-23T10:36:29.348Z",
+>>>>>>> Stashed changes
     "size": 496,
     "path": "../../.output/public/assets/main-line-md.svg"
   },
   "/assets/main-line-sm.svg": {
     "type": "image/svg+xml",
     "etag": "\"1f1-Vo56arFEfgBhpnnj+BKI1Ii3VSk\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.740Z",
+=======
+    "mtime": "2023-07-23T10:27:00.630Z",
+>>>>>>> Stashed changes
     "size": 497,
     "path": "../../.output/public/assets/main-line-sm.svg"
   },
   "/assets/main-line.svg": {
     "type": "image/svg+xml",
     "etag": "\"1e5-YmN2+emuDqWeOfOrYvpmcZBqBvE\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.740Z",
+=======
+    "mtime": "2023-07-23T10:26:16.586Z",
+>>>>>>> Stashed changes
     "size": 485,
     "path": "../../.output/public/assets/main-line.svg"
   },
   "/assets/sub-line-md.svg": {
     "type": "image/svg+xml",
     "etag": "\"5a8-3gZsYY+hurEz6VXa8GQ69Loaias\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.741Z",
+=======
+    "mtime": "2023-07-23T09:53:53.654Z",
+>>>>>>> Stashed changes
     "size": 1448,
     "path": "../../.output/public/assets/sub-line-md.svg"
   },
   "/assets/sub-line-sm.svg": {
     "type": "image/svg+xml",
     "etag": "\"5a5-VPCmYYqwxy3LwHf7IWcw6wjHN5I\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.741Z",
+=======
+    "mtime": "2023-07-23T09:54:48.818Z",
+>>>>>>> Stashed changes
     "size": 1445,
     "path": "../../.output/public/assets/sub-line-sm.svg"
   },
   "/assets/sub-line.svg": {
     "type": "image/svg+xml",
     "etag": "\"8a0-AEq8HzLNEmcVtPkroOSfZe8wvOw\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.742Z",
+=======
+    "mtime": "2023-07-23T09:52:05.331Z",
+>>>>>>> Stashed changes
     "size": 2208,
     "path": "../../.output/public/assets/sub-line.svg"
   },
   "/_nuxt/default.2cb01fce.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"dcc-93VC4vc9rfvDytgqgrD7L85K0t4\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 3532,
     "path": "../../.output/public/_nuxt/default.2cb01fce.css"
   },
   "/_nuxt/default.30ea0d1c.js": {
     "type": "application/javascript",
     "etag": "\"84e-qimGxWzhnFHzgi8zME6FyoqPNQA\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 2126,
     "path": "../../.output/public/_nuxt/default.30ea0d1c.js"
   },
   "/_nuxt/entry.ae0076fd.js": {
     "type": "application/javascript",
     "etag": "\"22e47-+5+wuoD/xB/0NxwsaeWHnQR2/Cw\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.419Z",
+=======
+    "mtime": "2023-07-26T14:59:38.021Z",
+>>>>>>> Stashed changes
     "size": 142919,
     "path": "../../.output/public/_nuxt/entry.ae0076fd.js"
   },
   "/_nuxt/entry.baa69784.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"dd-yeqfVpYdQGv9Nq7jGNl0MgbT0rw\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 221,
     "path": "../../.output/public/_nuxt/entry.baa69784.css"
   },
   "/_nuxt/error-404.23f2309d.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"e2e-ivsbEmi48+s9HDOqtrSdWFvddYQ\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 3630,
     "path": "../../.output/public/_nuxt/error-404.23f2309d.css"
   },
   "/_nuxt/error-404.3643e6b4.js": {
     "type": "application/javascript",
     "etag": "\"1983-B959JTSDez6jXtC2bHkzizKUENg\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.423Z",
+=======
+    "mtime": "2023-07-26T14:59:38.025Z",
+>>>>>>> Stashed changes
     "size": 6531,
     "path": "../../.output/public/_nuxt/error-404.3643e6b4.js"
   },
   "/_nuxt/error-500.6fc5eeb7.js": {
     "type": "application/javascript",
     "etag": "\"756-HkeuKg/X65bB79eZ9y+MzJJx0bA\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 1878,
     "path": "../../.output/public/_nuxt/error-500.6fc5eeb7.js"
   },
   "/_nuxt/error-500.aa16ed4d.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"79e-7j4Tsx89siDo85YoIs0XqsPWmPI\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 1950,
     "path": "../../.output/public/_nuxt/error-500.aa16ed4d.css"
   },
   "/_nuxt/index.31974a5e.js": {
     "type": "application/javascript",
     "etag": "\"1ff1-iNPQvFV5IlylaICKoDZaRrAHgWY\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 8177,
     "path": "../../.output/public/_nuxt/index.31974a5e.js"
   },
   "/_nuxt/index.be212189.css": {
     "type": "text/css; charset=utf-8",
     "etag": "\"295a-7umFYwxNGitsvN5dVJx2LD1BMcg\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:09:02.422Z",
+=======
+    "mtime": "2023-07-26T14:59:38.024Z",
+>>>>>>> Stashed changes
     "size": 10586,
     "path": "../../.output/public/_nuxt/index.be212189.css"
   },
   "/assets/icons/blind.svg": {
     "type": "image/svg+xml",
     "etag": "\"6b1-sO21OmKkT6Xn6v+ywdBzInRPaSc\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.737Z",
+=======
+    "mtime": "2023-07-19T10:12:24.609Z",
+>>>>>>> Stashed changes
     "size": 1713,
     "path": "../../.output/public/assets/icons/blind.svg"
   },
   "/assets/icons/burger.svg": {
     "type": "image/svg+xml",
     "etag": "\"110-g8lQvn852+MhUuQcuG0NAVLdsd8\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.737Z",
+=======
+    "mtime": "2023-07-21T12:42:37.482Z",
+>>>>>>> Stashed changes
     "size": 272,
     "path": "../../.output/public/assets/icons/burger.svg"
   },
   "/assets/icons/search.svg": {
     "type": "image/svg+xml",
     "etag": "\"1b5-te5mep3ddnb/XRgz1VSg4va69Oc\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.738Z",
+=======
+    "mtime": "2023-07-19T10:11:53.451Z",
+>>>>>>> Stashed changes
     "size": 437,
     "path": "../../.output/public/assets/icons/search.svg"
   },
   "/assets/icons/x.svg": {
     "type": "image/svg+xml",
     "etag": "\"161-uxJzZpluUlHeYK7t0mATV+nQ+XE\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.738Z",
+=======
+    "mtime": "2023-07-23T13:02:16.977Z",
+>>>>>>> Stashed changes
     "size": 353,
     "path": "../../.output/public/assets/icons/x.svg"
   },
   "/assets/scss/_colors.scss": {
     "type": "text/x-scss; charset=utf-8",
     "etag": "\"8f-/mjjIqpYFdyw3K3ZeDdVLUEiBW0\"",
+<<<<<<< Updated upstream
     "mtime": "2023-07-26T15:06:55.741Z",
+=======
+    "mtime": "2023-07-26T14:51:05.591Z",
+>>>>>>> Stashed changes
     "size": 143,
     "path": "../../.output/public/assets/scss/_colors.scss"
   }
@@ -784,11 +907,19 @@ const _f4b49z = eventHandler((event) => {
   return readAsset(id);
 });
 
+<<<<<<< Updated upstream
 const _lazy_nvkz09 = () => import('../renderer.mjs').then(function (n) { return n.r; });
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
   { route: '/**', handler: _lazy_nvkz09, lazy: true, middleware: false, method: undefined }
+=======
+const _lazy_49Ag33 = () => import('../renderer.mjs').then(function (n) { return n.r; });
+
+const handlers = [
+  { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
+  { route: '/**', handler: _lazy_49Ag33, lazy: true, middleware: false, method: undefined }
+>>>>>>> Stashed changes
 ];
 
 function createNitroApp() {
