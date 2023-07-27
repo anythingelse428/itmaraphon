@@ -99,10 +99,15 @@ export default {
   },
   mounted() {
     this.changeCurrentHistoryItem()
-    // window.addEventListener('scroll', () => {
-    //   this.changeCurrentHistoryItem()
-    // })
-  }
+    window.addEventListener('scroll', () => {
+      this.changeCurrentHistoryItem()
+    })
+  },
+  unmounted() {
+    window.removeEventListener('scroll', () => {
+      this.changeCurrentHistoryItem()
+    })
+  },
 }
 </script>
 
@@ -113,6 +118,7 @@ export default {
   position: relative;
   flex-wrap: nowrap;
   z-index: 5;
+
   &__row {
     position: relative;
     width: 100%;
