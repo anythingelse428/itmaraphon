@@ -99,10 +99,9 @@ export default {
   },
   mounted() {
     this.changeCurrentHistoryItem()
-    window.addEventListener('scroll', () => {
-      this.changeCurrentHistoryItem()
-
-    })
+    // window.addEventListener('scroll', () => {
+    //   this.changeCurrentHistoryItem()
+    // })
   }
 }
 </script>
