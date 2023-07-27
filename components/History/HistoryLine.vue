@@ -103,11 +103,7 @@ export default {
       this.changeCurrentHistoryItem()
     })
   },
-  unmounted() {
-    window.removeEventListener('scroll', () => {
-      this.changeCurrentHistoryItem()
-    })
-  },
+
 }
 </script>
 
