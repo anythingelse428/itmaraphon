@@ -61,6 +61,8 @@ export default {
   flex-wrap: nowrap;
 
   * {
+    position: relative;
+    z-index: 4;
     transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
