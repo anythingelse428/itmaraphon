@@ -98,7 +98,7 @@ export default {
     },
   },
   mounted() {
-    this.changeCurrentHistoryItem()
+    this.changeCurrentHistoryItem();
     window.addEventListener('scroll', () => {
       this.changeCurrentHistoryItem()
     })
