@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
   mode: 'ssr',
   router: {
-    base: '/anythingelse428.github.io'
+    base: '/anythingelse428.github.io/'
   },
   app: {
-    baseURL: '/anythingelse428.github.io'
+    baseURL: '/anythingelse428.github.io/'
   },
   devtools: { enabled: false },
   vite: {
