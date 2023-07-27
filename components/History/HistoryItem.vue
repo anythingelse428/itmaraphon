@@ -28,7 +28,7 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
   name: 'HistoryItem',
   props: {
@@ -68,7 +68,7 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .history-item {
