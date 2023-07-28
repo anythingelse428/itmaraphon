@@ -12,7 +12,7 @@
 </template>
 
 <script lang="ts">
-const HistoryItem = () => import('./HistoryItem.vue')
+const HistoryItem = () => import(/* webpackChunkName: "HistoryItem" */'./HistoryItem.vue')
 const PaginationNav = () => import('../Pagination/PaginationNav.vue')
 export default {
   name: "HistoryLine",

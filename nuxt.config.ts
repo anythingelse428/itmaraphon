@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/',// baseURL: '/<repository>/'
@@ -19,6 +20,8 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: false },
   vite: {
+    plugins:[
+    ],
     css: {
       preprocessorOptions: {
         scss: {
@@ -27,4 +30,5 @@ export default defineNuxtConfig({
       }
     }
   }
+
 })

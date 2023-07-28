@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 * {
-  transition: all .35s ease-in-out ;
+  transition: all .35s ease-in-out;
 }
 
 .history-item {
@@ -186,6 +186,13 @@ export default {
 
     .history-item__step {
       top: 3px;
+      width: 16px;
+      height: 16px;
+
+      &::before {
+        background: #7190FF;
+        filter: drop-shadow(0px 0px 19px #3562FF);
+      }
 
       @media screen and (max-width: 1350px) {
         right: -4px;
@@ -193,6 +200,8 @@ export default {
 
       @media screen and (max-width:550px) {
         right: -3px;
+        width: 8px;
+        height: 8px;
       }
     }
 
@@ -204,27 +213,9 @@ export default {
         }
       }
 
-      .history-item__line.--main {
-        // @media screen and (max-width: 550px) {
-        //   right: 2px;
-        // }
-      }
+
     }
 
-    .history-item__step {
-      width: 16px;
-      height: 16px;
-
-      @media screen and (max-width:550px) {
-        width: 8px;
-        height: 8px;
-      }
-
-      &::before {
-        background: #7190FF;
-        filter: drop-shadow(0px 0px 19px #3562FF);
-      }
-    }
   }
 
   &.--current {
@@ -264,10 +255,6 @@ export default {
         right: calc(330px / 2 - 42px);
       }
     }
-
-    &:not(.--reversed) {
-      .history-item__step {}
-    }
   }
 
   &__header {
@@ -302,19 +289,9 @@ export default {
       filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
     }
 
-    @media screen and (max-width:1350px) {
-
-      // right: -6px;
-    }
-
-    @media screen and (max-width:1000px) {
-      // right: -4px;
-    }
-
     @media screen and (max-width:550px) {
       width: 14px;
       height: 14px;
-      // left: 3px;
     }
   }
 
@@ -323,7 +300,6 @@ export default {
     width: 100%;
     display: flex;
     justify-content: center;
-
 
     &.--main {
       position: relative;
@@ -348,7 +324,6 @@ export default {
         @media screen and (max-width: 1350px) {
           right: -11px;
           height: 100%;
-          content: url('/assets/main-line-md.svg');
         }
 
         @media screen and (max-width: 550px) {
@@ -357,8 +332,6 @@ export default {
           content: url('/assets/main-line-sm.svg');
           height: 100%;
         }
-
-
       }
     }
 
@@ -385,7 +358,6 @@ export default {
         min-width: inherit;
         left: 3px;
       }
-
 
       .svg {
         display: flex;
@@ -465,5 +437,4 @@ export default {
     }
   }
 
-}
-</style>
+}</style>

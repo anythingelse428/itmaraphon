@@ -29,8 +29,7 @@ html {
 
 <script setup lang="ts">
 import {
-  useSchemaOrg, defineOrganization, defineWebSite,
-  defineWebPage
+  useSchemaOrg, defineOrganization,
 } from '@unhead/schema-org'
 
 useSeoMeta({
