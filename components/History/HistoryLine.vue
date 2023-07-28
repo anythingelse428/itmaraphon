@@ -64,14 +64,14 @@ export default {
         }
       ],
       currentYear: 1985,
-      currentPage: 0
+      currentPage: 0,
     }
   },
   methods: {
     changeCurrentHistoryItem() {
       const options: IntersectionObserverInit = {
-        threshold: [0.5],
-        rootMargin: "-30% 0% -30% 0%",
+        threshold: [0.9],
+        rootMargin: "-15% 0% -15% 0%",
       };
       const updateCurrent = (
         entries: IntersectionObserverEntry[],
@@ -79,7 +79,7 @@ export default {
       ) => {
         entries.forEach((entry) => {
           const target = entry.target;
-          if (entry.isIntersecting && entry.intersectionRatio >= .5) {
+          if (entry.isIntersecting) {
             debounce(() => {
               this.currentYear = Number(target.getAttribute("aria-label"));
               this.currentPage = Number(

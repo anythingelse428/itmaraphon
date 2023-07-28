@@ -1,5 +1,6 @@
 <template>
-  <section :class="(isCurrent ? '--current' : '--muted') + (isReversed ? ' --reversed' : '') + ' history-item'">
+  <section
+    :class="(isCurrent ? '--current' : '--muted') + (isReversed && isDesktop ? ' --reversed' : '') + ' history-item'">
     <div class="history-item__header">
       <div class="history-item__year">
         {{ year }}
@@ -55,20 +56,27 @@ export default {
   },
   data() {
     return {
-      itemHeight: 0
+      itemHeight: 0,
+      isDesktop: true
     }
+  },
+  mounted() {
+    this.isDesktop = window.innerWidth > 1350
+    addEventListener('resize', () => {
+      this.isDesktop = window.innerWidth > 1350
+    })
   },
   computed: {
     isCurrent() {
       return this.currentArea == this.year
-    }
+    },
   }
 }
 </script>
 
 <style lang="scss" scoped>
 * {
-  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all .35s ease-in-out ;
 }
 
 .history-item {
@@ -108,26 +116,49 @@ export default {
   }
 
   &.--reversed {
-    .history-item__step {
-      // right: 1px;
-
-      @media screen and (max-width:1350px) {
-        right: -1px;
-      }
-
-      @media screen and (max-width:1000px) {
-        right: 0.5px;
-      }
-
-      @media screen and (max-width:550px) {
-        left: 4px;
+    &.--current {
+      .history-item__step {
+        right: 0px;
       }
     }
 
+    .history-item__step {
+      right: 1px;
+    }
+
     .history-item__line {
+      flex-direction: row-reverse;
+
+      .--main {
+        .svg {
+          right: 2px;
+        }
+      }
+
+      .--sub {
+        flex-direction: row-reverse;
+
+        .history-item__info {
+          text-align: end;
+          margin-right: 20px;
+          margin-left: 0px;
+        }
+
+        .svg {
+          right: -2px;
+          transform: rotateY(180deg);
+        }
+      }
+
       @media screen and (max-width: 1350px) {
 
         flex-direction: row !important;
+
+        .--main {
+          .svg {
+            right: -11px;
+          }
+        }
 
         .--sub {
           flex-direction: row !important;
@@ -139,23 +170,9 @@ export default {
           }
 
           .svg {
+            right: 0;
             transform: rotateY(0deg);
           }
-        }
-      }
-    }
-
-    &.--muted {
-      .history-item__step {
-        right: 1px;
-        top: 2px;
-
-        @media screen and (max-width:1350px) {
-          right: -3px;
-        }
-
-        @media screen and (max-width:1000px) {
-          right: -3.5px;
         }
       }
     }
@@ -167,20 +184,30 @@ export default {
       color: var(--unnamed, #6176AD);
     }
 
+    .history-item__step {
+      top: 3px;
+
+      @media screen and (max-width: 1350px) {
+        right: -4px;
+      }
+
+      @media screen and (max-width:550px) {
+        right: -3px;
+      }
+    }
+
     &.--reversed {
       .history-item__step {
         @media screen and (max-width:550px) {
           width: 8px;
           height: 8px;
-          left: 6px;
-          right: 0 !important;
         }
       }
 
       .history-item__line.--main {
-        @media screen and (max-width: 550px) {
-          right: 2px;
-        }
+        // @media screen and (max-width: 550px) {
+        //   right: 2px;
+        // }
       }
     }
 
@@ -188,15 +215,9 @@ export default {
       width: 16px;
       height: 16px;
 
-      @media screen and (max-width:1000px) {
-        right: -5px;
-      }
-
       @media screen and (max-width:550px) {
         width: 8px;
         height: 8px;
-        left: 6px;
-        right: 0 !important;
       }
 
       &::before {
@@ -245,21 +266,20 @@ export default {
     }
 
     &:not(.--reversed) {
-      .history-item__step {
-        @media screen and (max-width:1350px) {
-          right: -2px;
-        }
-
-        @media screen and (max-width:1000px) {
-          right: -1px;
-        }
-
-      }
+      .history-item__step {}
     }
   }
 
   &__header {
     margin-bottom: 32px;
+
+    @media screen and (max-width:1000px) {
+      margin-bottom: 24px;
+    }
+
+    @media screen and (max-width:550px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__step {
@@ -267,8 +287,8 @@ export default {
     position: relative;
     width: 24px;
     height: 24px;
-    // right: 1px;
-    top: 1px;
+    right: 0;
+    top: 2px;
     z-index: 5;
 
     &::before {
@@ -284,17 +304,17 @@ export default {
 
     @media screen and (max-width:1350px) {
 
-      right: -6px;
+      // right: -6px;
     }
 
     @media screen and (max-width:1000px) {
-      right: -4px;
+      // right: -4px;
     }
 
     @media screen and (max-width:550px) {
-      width: 15px;
-      height: 15px;
-      left: 3px;
+      width: 14px;
+      height: 14px;
+      // left: 3px;
     }
   }
 
@@ -311,15 +331,9 @@ export default {
       display: flex;
       justify-content: flex-end;
       width: calc(100% + 1px);
-      right: -1px;
 
       @media screen and (max-width:1350px) {
-        width: 4px;
-      }
-
-      @media screen and (max-width:550px) {
         width: 3px;
-        right: 3px;
       }
 
       .svg {
@@ -329,6 +343,7 @@ export default {
         justify-content: center;
         width: 3px;
         content: url('/assets/main-line.svg');
+        right: -1px;
 
         @media screen and (max-width: 1350px) {
           right: -11px;
@@ -337,6 +352,8 @@ export default {
         }
 
         @media screen and (max-width: 550px) {
+          right: -6px;
+          width: 2px;
           content: url('/assets/main-line-sm.svg');
           height: 100%;
         }
@@ -366,7 +383,7 @@ export default {
 
       @media screen and (max-width:550px) {
         min-width: inherit;
-        left: 6px;
+        left: 3px;
       }
 
 
@@ -387,39 +404,6 @@ export default {
           width: 54px;
           height: 50px;
         }
-      }
-    }
-
-    &.--reversed {
-      flex-direction: row-reverse;
-
-      .--main {
-        right: 1px;
-        justify-content: flex-start;
-      }
-
-      .history-item__step {
-        right: 1px;
-      }
-
-      .--sub {
-        flex-direction: row-reverse;
-        right: 0;
-        left: 1px;
-
-        @media screen and (max-width:1350px) {
-          left: 7px;
-        }
-      }
-
-      .history-item__info {
-        text-align: end;
-        margin-right: 20px;
-        margin-left: 0;
-      }
-
-      .svg {
-        transform: rotateY(180deg);
       }
     }
   }
@@ -476,7 +460,7 @@ export default {
       font-size: 10px;
       font-weight: 400;
       line-height: 12px;
-      top: 4em;
+      top: 3em;
       width: calc(100% - 20px - 74px);
     }
   }

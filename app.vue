@@ -20,7 +20,38 @@
     text-decoration: none;
   }
 }
+
 body,
 html {
   // overflow-x: hidden;
-}</style>
+}
+</style>
+
+<script setup lang="ts">
+import {
+  useSchemaOrg, defineOrganization, defineWebSite,
+  defineWebPage
+} from '@unhead/schema-org'
+
+useSeoMeta({
+  title: 'УавиаК-МЦК',
+  ogTitle: 'ОГАПОУ «УАвиаК-МЦК»',
+  ogImageAlt: 'УавиаК-МЦК',
+  ogLocale: 'ru',
+  description: 'Официальный сайт ОГАПОУ «УАвиаК-МЦК»',
+  ogDescription: 'УАвиаК-МЦК — это современное учебное заведение, в котором качественному обучению способствуют комфортные условия, новейшее оборудование и богатый опыт педагогов.',
+})
+
+useSchemaOrg([
+  defineOrganization({
+    name: 'УавиаК-МЦК',
+    logo: '/logo.svg',
+    description: 'УАвиаК-МЦК — это современное учебное заведение, в котором качественному обучению способствуют комфортные условия, новейшее оборудование и богатый опыт педагогов.',
+    sameAs: [
+      'https://vk.com/uaviakmck'
+    ]
+  }),
+
+])
+
+</script>
