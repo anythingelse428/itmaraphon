@@ -78,6 +78,11 @@ export default {
   position: relative;
   display: block;
 
+  * {
+    position: relative;
+    z-index: 4;
+  }
+
   &::before,
   &::after {
     display: block;
@@ -93,13 +98,13 @@ export default {
 
   &::after {
     background: rgba(0, 87, 255, 0.08);
-    top: -330px;
-    left: 90px;
+    top: -50%;
+    left: 3%;
   }
 
   &::before {
-    top: 420px;
-    right: -90px;
+    top: 50%;
+    right: -4%;
     background: rgba(0, 87, 255, 0.15);
   }
 }

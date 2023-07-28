@@ -88,7 +88,8 @@ export default {
 
   * {
     color: $history-item-color;
-
+    position: relative;
+    z-index: 4;
   }
 
   @media screen and (max-width:1350px) {
@@ -197,7 +198,6 @@ export default {
       @media screen and (max-width: 1350px) {
         right: -4px;
       }
-
       @media screen and (max-width:550px) {
         right: -3px;
         width: 8px;
@@ -213,7 +213,6 @@ export default {
         }
       }
 
-
     }
 
   }
@@ -226,8 +225,10 @@ export default {
       display: block;
       top: -110px;
       left: -90px;
+      z-index: 2;
 
       &::before {
+        z-index: 2;
         position: absolute;
         content: "";
         inset: 0;
@@ -241,13 +242,15 @@ export default {
       width: 287px;
       height: 330px;
       position: relative;
+      z-index: 2;
 
       &::before {
+        position: absolute;
         content: "";
+        z-index: 2;
         display: block;
         width: 287px;
         height: 330px;
-        position: absolute;
         border-radius: 330px;
         background: rgba(0, 87, 255, 0.17);
         filter: blur(100px);
@@ -281,7 +284,7 @@ export default {
     &::before {
       position: absolute;
       content: '';
-      z-index: 2;
+      z-index: 5;
       inset: 0;
       border-radius: 100%;
       background: #E3F2FF;
@@ -437,4 +440,5 @@ export default {
     }
   }
 
-}</style>
+}
+</style>

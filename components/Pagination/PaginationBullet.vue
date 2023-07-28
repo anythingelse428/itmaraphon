@@ -47,7 +47,8 @@ export default {
   position: relative;
   margin: 0 auto;
   cursor: pointer;
-
+  border-radius: 100%;
+  background: transparent;
   &::before {
     position: relative;
     content: "";
@@ -56,28 +57,12 @@ export default {
     display: block;
     z-index: 5;
     border-radius: 100%;
-    background: var(--unnamed, #314373);
+    background: #314373;
   }
-
-  &::after {
-    inset: 0;
-    position: absolute;
-    display: block;
-    z-index: 4;
-    content: "";
-    border-radius: 100%;
-    background: #1849A0;
-    opacity: 0;
-    transition: all .25s;
-  }
-
   &.active {
+    background: #1849A0;
     &::before {
       background: #FCFDFD;
-    }
-
-    &::after {
-      opacity: 1;
     }
 
   }

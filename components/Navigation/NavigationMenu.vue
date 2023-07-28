@@ -83,14 +83,12 @@ export default {
       display: block;
       width: 54px;
       height: 54px;
-
       &::before {
         position: absolute;
         inset: 0;
         display: block;
         content: url('/assets/icons/burger.svg');
       }
-
       &.active {
         &::before {
           content: url('/assets/icons/x.svg');
@@ -110,13 +108,7 @@ export default {
       padding: 165px 99px;
       padding-bottom: 0;
       background: #121B3E;
-
-      &:not(.active) {
-        margin-top: -150vh;
-      }
-    }
-
-    &-collapse.active>&-links {
+      &>.nav-links {
       position: relative;
       inset: 0;
       display: flex;
@@ -128,7 +120,10 @@ export default {
       height: 14em;
       flex-wrap: wrap;
     }
-
+      &:not(.active) {
+        margin-top: -150vh;
+      }
+    }
   }
 
   @media screen and (max-width:800px) {
@@ -140,7 +135,7 @@ export default {
   }
 
   @media screen and (max-width:550px) {
-    &-collapse.active>&-links {
+    &-collapse>&-links {
       gap: 24px 5%;
     }
   }

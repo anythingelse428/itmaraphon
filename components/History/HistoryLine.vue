@@ -71,7 +71,7 @@ export default {
     changeCurrentHistoryItem() {
       const options: IntersectionObserverInit = {
         threshold: [0.9],
-        rootMargin: "-15% 0% -15% 0%",
+        rootMargin: "-5% 0% -15% 0%",
       };
       const updateCurrent = (
         entries: IntersectionObserverEntry[],

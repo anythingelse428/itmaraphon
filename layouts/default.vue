@@ -35,7 +35,8 @@ export default {
       width: min(1500px, 95%);
       max-width: 95%;
       margin: 0 auto;
-
+      position: relative;
+    
       @media screen and (max-width:1550px) {
         width: min(1200px, 95%);
       }
