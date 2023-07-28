@@ -3,6 +3,9 @@
 export default defineNuxtConfig({
   app: {
     baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/',// baseURL: '/<repository>/'
+    htmlAttrs: {
+      lang: 'ru'
+    },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',

@@ -429,7 +429,7 @@ export default {
     margin-left: 20px;
 
     @media screen and (max-width:550px) {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 400;
       line-height: 12px;
       top: 3em;
