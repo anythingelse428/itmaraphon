@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
+const path = require('path');
 export default defineNuxtConfig({
   app: {
     baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/',// baseURL: '/<repository>/'
@@ -22,10 +22,16 @@ export default defineNuxtConfig({
         {name:'description', content:'Сайт УавиаК-МЦК'},
         {name:'robots', content:'all'},
         {"http-equiv":'content-type', content:'text/html; charset=UTF-8'},
+        {"http-equiv":'Permissions-Policy', content:'interest-cohort=()'},
         {name:"msapplication-TileColor", content:'#2b5797'},
         {name:'theme-color', content:'#ffffff'}
       ]
     } 
+  },
+  nitro: {
+    output: {
+      publicDir: path.join(__dirname, 'docs')
+    }
   },
   devtools: { enabled: false },
   vite: {
