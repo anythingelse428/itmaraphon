@@ -11,7 +11,7 @@
 
 
 <script lang="ts">
-import NavigationMenu from '../components/NavigationMenu.vue';
+import NavigationMenu from '../components/Navigation/NavigationMenu.vue';
 export default {
   components: {
     NavigationMenu

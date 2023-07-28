@@ -5,12 +5,12 @@
     </div>
     <div class="nav-collapse" :class="isOpened && 'active'">
       <div class="nav-links">
-        <div class="nav-link">О колледже</div>
-        <div class="nav-link">Абитуриентам</div>
-        <div class="nav-link">Студентам</div>
-        <div class="nav-link">Преподавателям</div>
-        <div class="nav-link">Трудоустройство</div>
-        <div class="nav-link">Автошкола</div>
+        <NavigationLink>О колледже</NavigationLink>
+        <NavigationLink>Абитуриентам</NavigationLink>
+        <NavigationLink>Студентам</NavigationLink>
+        <NavigationLink>Преподавателям</NavigationLink>
+        <NavigationLink>Трудоустройство</NavigationLink>
+        <NavigationLink>Автошкола</NavigationLink>
       </div>
     </div>
     <div class="nav-tools">
@@ -25,8 +25,12 @@
   </nav>
 </template>
 <script lang="ts">
+import NavigationLink from './NavigationLink.vue'
 export default {
   name: 'NavigationMenu',
+  components:{
+    NavigationLink
+  },
   data() {
     return {
       isOpened: false
@@ -123,13 +127,6 @@ export default {
       gap: 42px 25%;
       height: 14em;
       flex-wrap: wrap;
-
-      .nav-link {
-        color: $mobile-nav-link-color;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-      }
     }
 
   }
@@ -180,28 +177,6 @@ export default {
     }
 
   }
-
-  &-link {
-    color: $nav-link-color;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 130%;
-    transition: all .1s;
-    cursor: pointer;
-
-    &:hover {
-      color: #b7bbc4;
-    }
-
-    @media screen and (max-width: 1200px) {
-      color: $mobile-nav-link-color;
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-  }
-
   &-tools {
     display: flex;
     flex-direction: row;

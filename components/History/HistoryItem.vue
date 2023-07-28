@@ -1,5 +1,5 @@
 <template>
-  <div :class="(isCurrent ? '--current' : '--muted') + (isReversed ? ' --reversed' : '') + ' history-item'">
+  <section :class="(isCurrent ? '--current' : '--muted') + (isReversed ? ' --reversed' : '') + ' history-item'">
     <div class="history-item__header">
       <div class="history-item__year">
         {{ year }}
@@ -13,7 +13,7 @@
       <div class="big-light"></div>
 
     </div>
-    <div :class="'history-item__line' + (isReversed ? ' --reversed' : '')">
+    <div class="history-item__line">
       <div class="history-item__line --main">
         <div class="svg"></div>
       </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts">
 export default {
@@ -98,8 +98,35 @@ export default {
         justify-content: start !important;
         width: fit-content;
       }
+    }
+  }
 
-      &.--reversed {
+  @media screen and (max-width:1000px) {
+    .history-item__line.--sub {
+      max-width: 94%;
+    }
+  }
+
+  &.--reversed {
+    .history-item__step {
+      // right: 1px;
+
+      @media screen and (max-width:1350px) {
+        right: -1px;
+      }
+
+      @media screen and (max-width:1000px) {
+        right: 0.5px;
+      }
+
+      @media screen and (max-width:550px) {
+        left: 4px;
+      }
+    }
+
+    .history-item__line {
+      @media screen and (max-width: 1350px) {
+
         flex-direction: row !important;
 
         .--sub {
@@ -115,30 +142,6 @@ export default {
             transform: rotateY(0deg);
           }
         }
-      }
-    }
-  }
-
-  @media screen and (max-width:1000px) {
-    .history-item__line.--sub {
-      max-width: 94%;
-    }
-  }
-
-  &.--reversed {
-    .history-item__step {
-      right: 1px;
-
-      @media screen and (max-width:1350px) {
-        right: 1.1px;
-      }
-
-      @media screen and (max-width:1000px) {
-        right: 0.5px;
-      }
-
-      @media screen and (max-width:550px) {
-        left: 4px;
       }
     }
 
@@ -259,8 +262,6 @@ export default {
     margin-bottom: 32px;
   }
 
-
-
   &__step {
     display: block;
     position: relative;
@@ -327,31 +328,20 @@ export default {
         position: relative;
         justify-content: center;
         width: 3px;
+        content: url('/assets/main-line.svg');
 
         @media screen and (max-width: 1350px) {
           right: -11px;
           height: 100%;
+          content: url('/assets/main-line-md.svg');
         }
 
         @media screen and (max-width: 550px) {
+          content: url('/assets/main-line-sm.svg');
           height: 100%;
         }
 
-        &::before {
-          display: block;
-          position: relative;
-          height: 100%;
-          content: url('/assets/main-line.svg');
-          background-repeat: no-repeat;
 
-          @media screen and (max-width: 1000px) {
-            content: url('/assets/main-line-md.svg');
-          }
-
-          @media screen and (max-width: 550px) {
-            content: url('/assets/main-line-sm.svg');
-          }
-        }
       }
     }
 
@@ -384,29 +374,18 @@ export default {
         display: flex;
         position: relative;
         width: 163px;
-        height: 46px;
+        height: 70px;
+        content: url('/assets/sub-line.svg');
 
         @media screen and (max-width: 1000px) {
           width: 187px;
+          content: url('/assets/sub-line-md.svg');
         }
 
         @media screen and (max-width: 550px) {
+          content: url('/assets/sub-line-sm.svg');
           width: 54px;
           height: 50px;
-        }
-
-        &::before {
-          display: block;
-          position: relative;
-          content: url('/assets/sub-line.svg');
-
-          @media screen and (max-width: 1000px) {
-            content: url('/assets/sub-line-md.svg');
-          }
-
-          @media screen and (max-width: 550px) {
-            content: url('/assets/sub-line-sm.svg');
-          }
         }
       }
     }
@@ -502,4 +481,5 @@ export default {
     }
   }
 
-}</style>
+}
+</style>

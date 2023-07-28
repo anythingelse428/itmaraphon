@@ -69,39 +69,41 @@ export default {
   },
   methods: {
     changeCurrentHistoryItem() {
-      const itemHeight = Number(document.querySelector('.history-item')?.clientHeight)
       const options: IntersectionObserverInit = {
-        threshold: [0],
-        rootMargin: '-15% 0% -15% 0%',
+        threshold: [0.5],
+        rootMargin: "-30% 0% -30% 0%",
       };
-
-      const updateCurrent = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+      const updateCurrent = (
+        entries: IntersectionObserverEntry[],
+        observer: IntersectionObserver
+      ) => {
         entries.forEach((entry) => {
-          const _currentLink = entry.target.parentElement?.parentElement
-          if (entry.isIntersecting && entry.intersectionRatio > 0.8 && _currentLink) {
-            console.log(_currentLink.id);
-
+          const target = entry.target;
+          if (entry.isIntersecting && entry.intersectionRatio >= .5) {
             debounce(() => {
-              this.currentYear = Number(_currentLink.ariaLabel)
-              this.currentPage = Number(_currentLink.id.replace('page_', ''))
-              useRouter().replace({ hash: '#' + _currentLink.id.replace('_', '') })
+              this.currentYear = Number(target.getAttribute("aria-label"));
+              this.currentPage = Number(
+                target.id.replace("page_", "")
+              );
+              useRouter().replace({ hash: "#" + target.id.replace("_", "") });
             })()
           }
         });
-      }
+      };
 
-      const observer: IntersectionObserver = new IntersectionObserver(updateCurrent, options);
-      const boxes: NodeListOf<HTMLDivElement> = document.querySelectorAll('.history-item__line.--main');
+      const observer: IntersectionObserver = new IntersectionObserver(
+        updateCurrent, options
+      );
+      const boxes: NodeListOf<HTMLDivElement> =
+        document.querySelectorAll("section.history-item");
+
       boxes.forEach((box) => {
         observer.observe(box);
       });
-    },
+    }
   },
   mounted() {
     this.changeCurrentHistoryItem();
-    window.addEventListener('scroll', () => {
-      this.changeCurrentHistoryItem()
-    })
   },
 
 }
