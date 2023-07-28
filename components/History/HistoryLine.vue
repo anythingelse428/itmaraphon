@@ -12,8 +12,8 @@
 </template>
 
 <script lang="ts">
-import HistoryItem from './HistoryItem.vue';
-import PaginationNav from '../Pagination/PaginationNav.vue'
+const HistoryItem = () => import('./HistoryItem.vue')
+const PaginationNav = () => import('../Pagination/PaginationNav.vue')
 export default {
   name: "HistoryLine",
   components: { HistoryItem, PaginationNav },
