@@ -34,5 +34,14 @@ export default {
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media screen and (max-width: 1100px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 </style>

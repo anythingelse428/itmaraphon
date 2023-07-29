@@ -28,7 +28,7 @@
 import NavigationLink from './NavigationLink.vue'
 export default {
   name: 'NavigationMenu',
-  components:{
+  components: {
     NavigationLink
   },
   data() {
@@ -73,6 +73,24 @@ export default {
   &-toggler {
     display: none;
     cursor: pointer;
+    width: 54px;
+    height: 54px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      display: block;
+      content: '';
+      background-repeat: round;
+      background-image: url('/assets/icons/burger.svg');
+    }
+
+    &.active {
+      &::before {
+        background-image: url('/assets/icons/x.svg');
+      }
+    }
   }
 
   @media screen and (max-width:1000px) {
@@ -81,19 +99,6 @@ export default {
 
     &-toggler {
       display: block;
-      width: 54px;
-      height: 54px;
-      &::before {
-        position: absolute;
-        inset: 0;
-        display: block;
-        content: url('/assets/icons/burger.svg');
-      }
-      &.active {
-        &::before {
-          content: url('/assets/icons/x.svg');
-        }
-      }
     }
 
     &-tool {
@@ -108,20 +113,22 @@ export default {
       padding: 165px 99px;
       padding-bottom: 0;
       background: #121B3E;
+
       &>.nav-links {
-      position: relative;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      align-content: flex-start;
-      justify-content: flex-start;
-      gap: 42px 25%;
-      height: 14em;
-      flex-wrap: wrap;
-    }
+        position: relative;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        gap: 42px 25%;
+        height: 14em;
+        flex-wrap: wrap;
+      }
+
       &:not(.active) {
-        margin-top: -150vh;
+        margin-top: -222vh;
       }
     }
   }
@@ -137,6 +144,23 @@ export default {
   @media screen and (max-width:550px) {
     &-collapse>&-links {
       gap: 24px 5%;
+    }
+
+    &-toggler {
+      width: 21px;
+      height: 16px;
+
+      &::before {
+        width: 21px;
+        height: 16px;
+      }
+    }
+
+    &-brand {
+      img {
+        width: 48px;
+        height: 28px;
+      }
     }
   }
 
@@ -170,8 +194,9 @@ export default {
     @media screen and (max-width: 1350px) {
       gap: 18px;
     }
-
+   
   }
+
   &-tools {
     display: flex;
     flex-direction: row;
