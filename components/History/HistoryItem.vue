@@ -119,7 +119,7 @@ export default {
   &.--reversed {
     &.--current {
       .history-item__step {
-        right: 0px;
+        right: 1px;
       }
     }
 
