@@ -75,7 +75,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .history-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -85,17 +84,18 @@ export default {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   margin-bottom: 24px;
+
   * {
     -webkit-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
@@ -109,9 +109,9 @@ export default {
   @media screen and (max-width:1350px) {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
-       -moz-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
 
     &__description,
     &__year {
@@ -121,16 +121,16 @@ export default {
     &__line {
       -webkit-box-pack: start !important;
       -webkit-justify-content: start !important;
-         -moz-box-pack: start !important;
-          -ms-flex-pack: start !important;
-              justify-content: start !important;
+      -moz-box-pack: start !important;
+      -ms-flex-pack: start !important;
+      justify-content: start !important;
 
       .--main {
         -webkit-box-pack: start !important;
         -webkit-justify-content: start !important;
-           -moz-box-pack: start !important;
-            -ms-flex-pack: start !important;
-                justify-content: start !important;
+        -moz-box-pack: start !important;
+        -ms-flex-pack: start !important;
+        justify-content: start !important;
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
@@ -145,12 +145,6 @@ export default {
   }
 
   &.--reversed {
-    &.--current {
-      .history-item__step {
-        right: 1px;
-      }
-    }
-
     .history-item__step {
       right: 1px;
     }
@@ -159,10 +153,10 @@ export default {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
       -webkit-flex-direction: row-reverse;
-         -moz-box-orient: horizontal;
-         -moz-box-direction: reverse;
-          -ms-flex-direction: row-reverse;
-              flex-direction: row-reverse;
+      -moz-box-orient: horizontal;
+      -moz-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
 
       .--main {
         .svg {
@@ -174,10 +168,10 @@ export default {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -webkit-flex-direction: row-reverse;
-           -moz-box-orient: horizontal;
-           -moz-box-direction: reverse;
-            -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
 
         .history-item__info {
           text-align: end;
@@ -188,8 +182,8 @@ export default {
         .svg {
           right: -2px;
           -webkit-transform: rotateY(180deg);
-             -moz-transform: rotateY(180deg);
-                  transform: rotateY(180deg);
+          -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
           will-change: transform;
         }
       }
@@ -202,13 +196,13 @@ export default {
 
         -webkit-flex-direction: row !important;
 
-           -moz-box-orient: horizontal !important;
+        -moz-box-orient: horizontal !important;
 
-           -moz-box-direction: normal !important;
+        -moz-box-direction: normal !important;
 
-            -ms-flex-direction: row !important;
+        -ms-flex-direction: row !important;
 
-                flex-direction: row !important;
+        flex-direction: row !important;
 
         .--main {
           .svg {
@@ -220,10 +214,10 @@ export default {
           -webkit-box-orient: horizontal !important;
           -webkit-box-direction: normal !important;
           -webkit-flex-direction: row !important;
-             -moz-box-orient: horizontal !important;
-             -moz-box-direction: normal !important;
-              -ms-flex-direction: row !important;
-                  flex-direction: row !important;
+          -moz-box-orient: horizontal !important;
+          -moz-box-direction: normal !important;
+          -ms-flex-direction: row !important;
+          flex-direction: row !important;
 
           .history-item__info {
             text-align: start;
@@ -234,8 +228,8 @@ export default {
           .svg {
             right: 0;
             -webkit-transform: rotateY(0deg);
-               -moz-transform: rotateY(0deg);
-                    transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            transform: rotateY(0deg);
           }
         }
       }
@@ -244,7 +238,6 @@ export default {
 
   &.--muted {
     * {
-
       color: var(--unnamed, #6176AD);
     }
 
@@ -252,11 +245,12 @@ export default {
       top: 3px;
       width: 16px;
       height: 16px;
+      will-change: width, height, top;
 
       &::before {
         background: #7190FF;
         -webkit-filter: drop-shadow(0px 0px 19px #3562FF);
-                filter: drop-shadow(0px 0px 19px #3562FF);
+        filter: drop-shadow(0px 0px 19px #3562FF);
       }
 
       @media screen and (max-width: 1350px) {
@@ -291,10 +285,10 @@ export default {
     left: -90px;
     z-index: 2;
     -webkit-transform: scale(0);
-       -moz-transform: scale(0);
-        -ms-transform: scale(0);
-         -o-transform: scale(0);
-            transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
     will-change: transform;
 
     &::before {
@@ -303,10 +297,10 @@ export default {
       content: "";
       inset: 0;
       -webkit-border-radius: 111px 96px;
-              border-radius: 111px 96px;
+      border-radius: 111px 96px;
       background: rgba(86, 144, 255, 0.13);
       -webkit-filter: blur(75px);
-              filter: blur(75px);
+      filter: blur(75px);
     }
   }
 
@@ -316,10 +310,10 @@ export default {
     position: relative;
     z-index: 2;
     -webkit-transform: scale(0);
-       -moz-transform: scale(0);
-        -ms-transform: scale(0);
-         -o-transform: scale(0);
-            transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
     will-change: transform;
 
     &::before {
@@ -330,10 +324,10 @@ export default {
       width: 287px;
       height: 330px;
       -webkit-border-radius: 330px;
-              border-radius: 330px;
+      border-radius: 330px;
       background: rgba(0, 87, 255, 0.17);
       -webkit-filter: blur(100px);
-              filter: blur(100px);
+      filter: blur(100px);
       bottom: -webkit-calc(287px / 2 + 42px);
       bottom: -moz-calc(287px / 2 + 42px);
       bottom: calc(287px / 2 + 42px);
@@ -351,10 +345,10 @@ export default {
     .big-light,
     .small-light {
       -webkit-transform: scale(1);
-         -moz-transform: scale(1);
-          -ms-transform: scale(1);
-           -o-transform: scale(1);
-              transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
       will-change: transform;
 
     }
@@ -387,7 +381,7 @@ export default {
       z-index: 5;
       inset: 0;
       -webkit-border-radius: 100%;
-              border-radius: 100%;
+      border-radius: 100%;
       background: #E3F2FF;
       -webkit-filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
       filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
@@ -410,9 +404,9 @@ export default {
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
     &.--main {
       position: relative;
@@ -424,9 +418,9 @@ export default {
       display: flex;
       -webkit-box-pack: end;
       -webkit-justify-content: flex-end;
-         -moz-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
       width: -webkit-calc(100% + 1px);
       width: -moz-calc(100% + 1px);
       width: calc(100% + 1px);
@@ -445,9 +439,9 @@ export default {
         position: relative;
         -webkit-box-pack: center;
         -webkit-justify-content: center;
-           -moz-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         width: 3px;
         content: url('/assets/main-line.svg');
         right: -1px;
@@ -478,9 +472,9 @@ export default {
       right: 1px;
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
-         -moz-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       max-width: 50%;
       min-width: 578px;
 
@@ -583,5 +577,4 @@ export default {
     }
   }
 
-}
-</style>
+}</style>
