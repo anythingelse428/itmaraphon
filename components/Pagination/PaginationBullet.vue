@@ -39,32 +39,46 @@ export default {
 <style lang="scss" scoped>
 .pagination-bullet {
 
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 24px;
+height: 24px;
+display: -webkit-box;
+display: -webkit-flex;
+display: -moz-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+   -moz-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+   -moz-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+position: relative;
+margin: 0 auto;
+cursor: pointer;
+-webkit-border-radius: 100%;
+        border-radius: 100%;
+background: transparent;
+&::before {
   position: relative;
-  margin: 0 auto;
-  cursor: pointer;
-  border-radius: 100%;
-  background: transparent;
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  z-index: 5;
+  -webkit-border-radius: 100%;
+          border-radius: 100%;
+  background: #314373;
+}
+&.active {
+  background: #1849A0;
   &::before {
-    position: relative;
-    content: "";
-    width: 12px;
-    height: 12px;
-    display: block;
-    z-index: 5;
-    border-radius: 100%;
-    background: #314373;
+    background: #FCFDFD;
   }
-  &.active {
-    background: #1849A0;
-    &::before {
-      background: #FCFDFD;
-    }
 
-  }
+}
 }
 </style>

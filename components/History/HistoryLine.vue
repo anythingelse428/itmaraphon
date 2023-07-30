@@ -77,16 +77,18 @@ export default {
         entries: IntersectionObserverEntry[],
         observer: IntersectionObserver
       ) => {
-        entries.forEach((entry) => {
-          const target = entry.target;
-          if (entry.isIntersecting) {
-            useRouter().replace({ hash: "#" + target.id.replace("_", "") });
-            this.currentYear = Number(target.getAttribute("aria-label"));
-            this.currentPage = Number(
-              target.id.replace("page_", "")
-            );
-          }
-        });
+        throttle(() => {
+          entries.forEach((entry) => {
+            const target = entry.target;
+            if (entry.isIntersecting) {
+              useRouter().replace({ hash: "#" + target.id.replace("_", "") });
+              this.currentYear = Number(target.getAttribute("aria-label"));
+              this.currentPage = Number(
+                target.id.replace("page_", "")
+              );
+            }
+          })
+        })()
       };
 
       const observer: IntersectionObserver = new IntersectionObserver(
@@ -108,11 +110,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .history {
   padding-bottom: 30vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   z-index: 5;
 
   &__row {
@@ -121,13 +130,21 @@ export default {
   }
 
   &__pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     position: fixed;
     left: 60px;
     z-index: 100;
     top: 0;
     bottom: 0;
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100vh;
 
     @media screen and (max-width:1350px) {

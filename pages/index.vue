@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .hero {
   width: min(810px, 100%);
   margin: 90px 0;
@@ -91,8 +92,10 @@ export default {
     position: fixed;
     width: 756px;
     height: 784px;
-    border-radius: 784px;
-    filter: blur(175px);
+    -webkit-border-radius: 784px;
+            border-radius: 784px;
+    -webkit-filter: blur(175px);
+            filter: blur(175px);
 
   }
 

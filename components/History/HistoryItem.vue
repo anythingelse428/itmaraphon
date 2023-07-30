@@ -76,14 +76,30 @@ export default {
 
 <style lang="scss" scoped>
 
-
 .history-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   margin-bottom: 24px;
   * {
+    -webkit-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
     color: $history-item-color;
     position: relative;
@@ -91,7 +107,11 @@ export default {
   }
 
   @media screen and (max-width:1350px) {
-    align-items: flex-start;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+       -moz-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
 
     &__description,
     &__year {
@@ -99,10 +119,20 @@ export default {
     }
 
     &__line {
-      justify-content: start !important;
+      -webkit-box-pack: start !important;
+      -webkit-justify-content: start !important;
+         -moz-box-pack: start !important;
+          -ms-flex-pack: start !important;
+              justify-content: start !important;
 
       .--main {
-        justify-content: start !important;
+        -webkit-box-pack: start !important;
+        -webkit-justify-content: start !important;
+           -moz-box-pack: start !important;
+            -ms-flex-pack: start !important;
+                justify-content: start !important;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
       }
     }
@@ -126,7 +156,13 @@ export default {
     }
 
     .history-item__line {
-      flex-direction: row-reverse;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+         -moz-box-orient: horizontal;
+         -moz-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse;
 
       .--main {
         .svg {
@@ -135,7 +171,13 @@ export default {
       }
 
       .--sub {
-        flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: row-reverse;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
 
         .history-item__info {
           text-align: end;
@@ -145,14 +187,28 @@ export default {
 
         .svg {
           right: -2px;
-          transform: rotateY(180deg);
+          -webkit-transform: rotateY(180deg);
+             -moz-transform: rotateY(180deg);
+                  transform: rotateY(180deg);
           will-change: transform;
         }
       }
 
       @media screen and (max-width: 1350px) {
 
-        flex-direction: row !important;
+        -webkit-box-orient: horizontal !important;
+
+        -webkit-box-direction: normal !important;
+
+        -webkit-flex-direction: row !important;
+
+           -moz-box-orient: horizontal !important;
+
+           -moz-box-direction: normal !important;
+
+            -ms-flex-direction: row !important;
+
+                flex-direction: row !important;
 
         .--main {
           .svg {
@@ -161,7 +217,13 @@ export default {
         }
 
         .--sub {
-          flex-direction: row !important;
+          -webkit-box-orient: horizontal !important;
+          -webkit-box-direction: normal !important;
+          -webkit-flex-direction: row !important;
+             -moz-box-orient: horizontal !important;
+             -moz-box-direction: normal !important;
+              -ms-flex-direction: row !important;
+                  flex-direction: row !important;
 
           .history-item__info {
             text-align: start;
@@ -171,7 +233,9 @@ export default {
 
           .svg {
             right: 0;
-            transform: rotateY(0deg);
+            -webkit-transform: rotateY(0deg);
+               -moz-transform: rotateY(0deg);
+                    transform: rotateY(0deg);
           }
         }
       }
@@ -191,7 +255,8 @@ export default {
 
       &::before {
         background: #7190FF;
-        filter: drop-shadow(0px 0px 19px #3562FF);
+        -webkit-filter: drop-shadow(0px 0px 19px #3562FF);
+                filter: drop-shadow(0px 0px 19px #3562FF);
       }
 
       @media screen and (max-width: 1350px) {
@@ -225,7 +290,11 @@ export default {
     top: -110px;
     left: -90px;
     z-index: 2;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
     will-change: transform;
 
     &::before {
@@ -233,9 +302,11 @@ export default {
       position: absolute;
       content: "";
       inset: 0;
-      border-radius: 111px 96px;
+      -webkit-border-radius: 111px 96px;
+              border-radius: 111px 96px;
       background: rgba(86, 144, 255, 0.13);
-      filter: blur(75px);
+      -webkit-filter: blur(75px);
+              filter: blur(75px);
     }
   }
 
@@ -244,7 +315,11 @@ export default {
     height: 330px;
     position: relative;
     z-index: 2;
-    transform: scale(0);
+    -webkit-transform: scale(0);
+       -moz-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
     will-change: transform;
 
     &::before {
@@ -254,10 +329,16 @@ export default {
       display: block;
       width: 287px;
       height: 330px;
-      border-radius: 330px;
+      -webkit-border-radius: 330px;
+              border-radius: 330px;
       background: rgba(0, 87, 255, 0.17);
-      filter: blur(100px);
+      -webkit-filter: blur(100px);
+              filter: blur(100px);
+      bottom: -webkit-calc(287px / 2 + 42px);
+      bottom: -moz-calc(287px / 2 + 42px);
       bottom: calc(287px / 2 + 42px);
+      right: -webkit-calc(330px / 2 - 42px);
+      right: -moz-calc(330px / 2 - 42px);
       right: calc(330px / 2 - 42px);
     }
   }
@@ -269,7 +350,11 @@ export default {
 
     .big-light,
     .small-light {
-      transform: scale(1);
+      -webkit-transform: scale(1);
+         -moz-transform: scale(1);
+          -ms-transform: scale(1);
+           -o-transform: scale(1);
+              transform: scale(1);
       will-change: transform;
 
     }
@@ -301,7 +386,8 @@ export default {
       content: '';
       z-index: 5;
       inset: 0;
-      border-radius: 100%;
+      -webkit-border-radius: 100%;
+              border-radius: 100%;
       background: #E3F2FF;
       -webkit-filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
       filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
@@ -317,14 +403,32 @@ export default {
   &__line {
     position: relative;
     width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     &.--main {
       position: relative;
       z-index: 2;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+         -moz-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      width: -webkit-calc(100% + 1px);
+      width: -moz-calc(100% + 1px);
       width: calc(100% + 1px);
 
       @media screen and (max-width:1350px) {
@@ -332,10 +436,18 @@ export default {
       }
 
       .svg {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
         height: 100%;
         position: relative;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 3px;
         content: url('/assets/main-line.svg');
         right: -1px;
@@ -358,9 +470,17 @@ export default {
       position: relative;
       top: 20px;
       z-index: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
       right: 1px;
-      justify-content: flex-start;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+         -moz-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       max-width: 50%;
       min-width: 578px;
 
@@ -379,6 +499,10 @@ export default {
       }
 
       .svg {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
         position: relative;
         width: 163px;
@@ -441,6 +565,8 @@ export default {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    width: -webkit-calc(100% - 20px - 163px);
+    width: -moz-calc(100% - 20px - 163px);
     width: calc(100% - 20px - 163px);
     position: relative;
     top: 2em;
@@ -451,6 +577,8 @@ export default {
       font-weight: 400;
       line-height: 12px;
       top: 3em;
+      width: -webkit-calc(100% - 20px - 74px);
+      width: -moz-calc(100% - 20px - 74px);
       width: calc(100% - 20px - 74px);
     }
   }

@@ -16,12 +16,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .nav-link {
   color: $nav-link-color;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  -moz-transition: all .1s;
   transition: all .1s;
   cursor: pointer;
 
