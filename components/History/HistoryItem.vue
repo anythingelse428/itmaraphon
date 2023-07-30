@@ -291,6 +291,20 @@ export default {
     transform: scale(0);
     will-change: transform;
 
+    @media screen and (max-width:1000px) {
+      width: 195px;
+      height: 225px;
+      top: -160px;
+      left: -34px;
+    }
+
+    @media screen and (max-width:550px) {
+      width: 81px;
+      height: 94px;
+      top: -42px;
+      left: -32px;
+    }
+
     &::before {
       z-index: 2;
       position: absolute;
@@ -302,12 +316,16 @@ export default {
       -webkit-filter: blur(75px);
       filter: blur(75px);
     }
+
   }
 
   .big-light {
     width: 287px;
     height: 330px;
     position: relative;
+    top: -142px;
+    left: -133px;
+    display: block;
     z-index: 2;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
@@ -316,24 +334,32 @@ export default {
     transform: scale(0);
     will-change: transform;
 
+    @media screen and (max-width:1000px) {
+      width: 291px;
+      height: 335px;
+      top: -240px;
+      left: -50px;
+    }
+
+    @media screen and (max-width:550px) {
+      width: 121px;
+      height: 139px;
+      top: -60px;
+      left: -50px;
+    }
+
     &::before {
       position: absolute;
       content: "";
       z-index: 2;
       display: block;
-      width: 287px;
-      height: 330px;
+      inset: 0;
       -webkit-border-radius: 330px;
       border-radius: 330px;
       background: rgba(0, 87, 255, 0.17);
       -webkit-filter: blur(100px);
       filter: blur(100px);
-      bottom: -webkit-calc(287px / 2 + 42px);
-      bottom: -moz-calc(287px / 2 + 42px);
-      bottom: calc(287px / 2 + 42px);
-      right: -webkit-calc(330px / 2 - 42px);
-      right: -moz-calc(330px / 2 - 42px);
-      right: calc(330px / 2 - 42px);
+
     }
   }
 
@@ -443,7 +469,7 @@ export default {
         -ms-flex-pack: center;
         justify-content: center;
         width: 3px;
-        content: url('/assets/main-line.svg');
+        content: url('~/assets/main-line.svg');
         right: -1px;
 
         @media screen and (max-width: 1350px) {
@@ -454,7 +480,7 @@ export default {
         @media screen and (max-width: 550px) {
           right: -6px;
           width: 2px;
-          content: url('/assets/main-line-sm.svg');
+          content: url('~/assets/main-line-sm.svg');
           height: 100%;
         }
       }
@@ -501,15 +527,15 @@ export default {
         position: relative;
         width: 163px;
         height: 70px;
-        content: url('/assets/sub-line.svg');
+        content: url('~/assets/sub-line.svg');
 
         @media screen and (max-width: 1000px) {
           width: 187px;
-          content: url('/assets/sub-line-md.svg');
+          content: url('~/assets/sub-line-md.svg');
         }
 
         @media screen and (max-width: 550px) {
-          content: url('/assets/sub-line-sm.svg');
+          content: url('~/assets/sub-line-sm.svg');
           width: 54px;
           height: 50px;
         }
@@ -577,4 +603,5 @@ export default {
     }
   }
 
-}</style>
+}
+</style>

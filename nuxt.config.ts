@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// const path = require('path');
 export default defineNuxtConfig({
   app: {
     baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/',// baseURL: '/<repository>/'
@@ -31,15 +30,22 @@ export default defineNuxtConfig({
       ]
     }
   },
-  // nitro: {
-  //   output: {
-  //     publicDir: path.join(__dirname, 'docs')
-  //   }
-  // },
+  nitro: {
+    routeRules: {
+      "*/assets/": { headers: { 'cache-control': `public,max-age=${1},s-maxage=${1}` } },
+      "/_nuxt/**": { headers: { 'cache-control': `public,max-age=${1},s-maxage=${1}` } }
+    },
+    compressPublicAssets: true,
+  },
   devtools: { enabled: false },
   vite: {
     plugins: [
     ],
+    server:{
+      headers:{
+        "Cache-Control": "max-age=1, s-maxage=1"
+      }
+    },
     css: {
       preprocessorOptions: {
         scss: {

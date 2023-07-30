@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .hero {
   width: min(810px, 100%);
   margin: 90px 0;
@@ -93,22 +92,38 @@ export default {
     width: 756px;
     height: 784px;
     -webkit-border-radius: 784px;
-            border-radius: 784px;
+    border-radius: 784px;
     -webkit-filter: blur(175px);
-            filter: blur(175px);
-
+    filter: blur(175px);
   }
 
   &::after {
     background: rgba(0, 87, 255, 0.08);
     top: -50%;
     left: 3%;
+
   }
 
   &::before {
     top: 50%;
     right: -4%;
     background: rgba(0, 87, 255, 0.15);
+  }
+
+  @media screen and (max-width:1000px) {
+    &::after {
+      width: 534px;
+      height: 534px;
+      top: -25%;
+      left: -23%;
+    }
+
+    &::before {
+      width: 600px;
+      height: 600px;
+      top: 70%;
+      right: -13%;
+    }
   }
 }
 </style>
