@@ -469,7 +469,7 @@ export default {
         -ms-flex-pack: center;
         justify-content: center;
         width: 3px;
-        content: url('~/assets/main-line.svg');
+        content: url('/assets/main-line.svg');
         right: -1px;
 
         @media screen and (max-width: 1350px) {
@@ -480,7 +480,7 @@ export default {
         @media screen and (max-width: 550px) {
           right: -6px;
           width: 2px;
-          content: url('~/assets/main-line-sm.svg');
+          content: url('/assets/main-line-sm.svg');
           height: 100%;
         }
       }
@@ -527,15 +527,15 @@ export default {
         position: relative;
         width: 163px;
         height: 70px;
-        content: url('~/assets/sub-line.svg');
+        content: url('/assets/sub-line.svg');
 
         @media screen and (max-width: 1000px) {
           width: 187px;
-          content: url('~/assets/sub-line-md.svg');
+          content: url('/assets/sub-line-md.svg');
         }
 
         @media screen and (max-width: 550px) {
-          content: url('~/assets/sub-line-sm.svg');
+          content: url('/assets/sub-line-sm.svg');
           width: 54px;
           height: 50px;
         }

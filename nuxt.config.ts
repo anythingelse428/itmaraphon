@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     routeRules: {
-      "*/assets/": { headers: { 'cache-control': `public,max-age=${1},s-maxage=${1}` } },
+      "/public/assets/": { headers: { 'cache-control': `public,max-age=${1},s-maxage=${1}` } },
       "/_nuxt/**": { headers: { 'cache-control': `public,max-age=${1},s-maxage=${1}` } }
     },
     compressPublicAssets: true,
