@@ -6,7 +6,7 @@
   </div>
 </template>
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -21,9 +21,27 @@
   }
 }
 
-body,
-html {
-  // overflow-x: hidden;
+
+body {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), linear-gradient(0deg, #121B3E 0%, #121B3E 100%), #FFF;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #dadada;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a7a7a7;
+  }
 }
 </style>
 

@@ -75,9 +75,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  transition: all .35s ease-in-out;
-}
+
 
 .history-item {
   display: flex;
@@ -85,8 +83,8 @@ export default {
   align-items: center;
   position: relative;
   margin-bottom: 24px;
-
   * {
+    transition: all 300ms ease-in-out;
     color: $history-item-color;
     position: relative;
     z-index: 4;
@@ -148,6 +146,7 @@ export default {
         .svg {
           right: -2px;
           transform: rotateY(180deg);
+          will-change: transform;
         }
       }
 
@@ -198,6 +197,7 @@ export default {
       @media screen and (max-width: 1350px) {
         right: -4px;
       }
+
       @media screen and (max-width:550px) {
         right: -3px;
         width: 8px;
@@ -217,46 +217,61 @@ export default {
 
   }
 
-  &.--current {
-    .small-light {
-      width: 193px;
-      height: 222px;
-      position: absolute;
-      display: block;
-      top: -110px;
-      left: -90px;
+  .small-light {
+    width: 193px;
+    height: 222px;
+    position: absolute;
+    display: block;
+    top: -110px;
+    left: -90px;
+    z-index: 2;
+    transform: scale(0);
+    will-change: transform;
+
+    &::before {
       z-index: 2;
-
-      &::before {
-        z-index: 2;
-        position: absolute;
-        content: "";
-        inset: 0;
-        border-radius: 111px 96px;
-        background: rgba(86, 144, 255, 0.13);
-        filter: blur(75px);
-      }
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 111px 96px;
+      background: rgba(86, 144, 255, 0.13);
+      filter: blur(75px);
     }
+  }
 
-    .big-light {
+  .big-light {
+    width: 287px;
+    height: 330px;
+    position: relative;
+    z-index: 2;
+    transform: scale(0);
+    will-change: transform;
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      display: block;
       width: 287px;
       height: 330px;
-      position: relative;
-      z-index: 2;
+      border-radius: 330px;
+      background: rgba(0, 87, 255, 0.17);
+      filter: blur(100px);
+      bottom: calc(287px / 2 + 42px);
+      right: calc(330px / 2 - 42px);
+    }
+  }
 
-      &::before {
-        position: absolute;
-        content: "";
-        z-index: 2;
-        display: block;
-        width: 287px;
-        height: 330px;
-        border-radius: 330px;
-        background: rgba(0, 87, 255, 0.17);
-        filter: blur(100px);
-        bottom: calc(287px / 2 + 42px);
-        right: calc(330px / 2 - 42px);
-      }
+  &.--current {
+    .history-item__year {
+      text-shadow: 0px 0px 4px rgba(227, 242, 255, 0.35);
+    }
+
+    .big-light,
+    .small-light {
+      transform: scale(1);
+      will-change: transform;
+
     }
   }
 
@@ -288,8 +303,9 @@ export default {
       inset: 0;
       border-radius: 100%;
       background: #E3F2FF;
-      opacity: 1;
+      -webkit-filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
       filter: drop-shadow(0px 0px 35px #4A6EF2) drop-shadow(0px 0px 10px #1070C9);
+      will-change: background, filter;
     }
 
     @media screen and (max-width:550px) {
@@ -384,7 +400,6 @@ export default {
   }
 
   &__year {
-    text-shadow: 0px 0px 4px rgba(227, 242, 255, 0.35);
     font-size: 46px;
     font-style: normal;
     font-weight: 400;

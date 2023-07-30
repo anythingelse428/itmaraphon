@@ -10,9 +10,9 @@ import { ref } from 'vue'
 const props = defineProps({
   pagesQty: { type: Number, required: true },
 })
-let current = ref(Number(useRoute().hash.replace('#page', '')))
+const current = ref(Number(useRoute().hash.replace('#page', '')))
 onBeforeRouteUpdate((newRoute) => {
-  current.value = Number(newRoute.hash.replace('#page', ''))
+    current.value = Number(newRoute.hash.replace('#page', ''))
 })
 
 </script>

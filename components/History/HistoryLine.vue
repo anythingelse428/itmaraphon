@@ -13,7 +13,7 @@
 
 <script lang="ts">
 const HistoryItem = () => import(/* webpackChunkName: "HistoryItem" */'./HistoryItem.vue')
-const PaginationNav = () => import('../Pagination/PaginationNav.vue')
+const PaginationNav = () => import(/* webpackChunkName: "PaginationNav" */'../Pagination/PaginationNav.vue')
 export default {
   name: "HistoryLine",
   components: { HistoryItem, PaginationNav },
@@ -71,7 +71,7 @@ export default {
     changeCurrentHistoryItem() {
       const options: IntersectionObserverInit = {
         threshold: [0.9],
-        rootMargin: "-5% 0% -15% 0%",
+        rootMargin: "-20% 0% -15% 0%",
       };
       const updateCurrent = (
         entries: IntersectionObserverEntry[],
@@ -80,13 +80,11 @@ export default {
         entries.forEach((entry) => {
           const target = entry.target;
           if (entry.isIntersecting) {
-            debounce(() => {
-              this.currentYear = Number(target.getAttribute("aria-label"));
-              this.currentPage = Number(
-                target.id.replace("page_", "")
-              );
-              useRouter().replace({ hash: "#" + target.id.replace("_", "") });
-            })()
+            useRouter().replace({ hash: "#" + target.id.replace("_", "") });
+            this.currentYear = Number(target.getAttribute("aria-label"));
+            this.currentPage = Number(
+              target.id.replace("page_", "")
+            );
           }
         });
       };

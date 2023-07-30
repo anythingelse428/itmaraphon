@@ -36,21 +36,7 @@ export default {
       isOpened: false
     }
   },
-  methods: {
-    doSticky() {
-      const $nav: HTMLDivElement = this.$refs.nav
-      if (window.scrollY >= $nav.offsetTop) {
-        $nav.classList.add("sticky")
-        $nav.parentElement?.classList.add('sticky')
-      } else {
-        $nav.classList.remove("sticky");
-      }
 
-    }
-  },
-  mounted() {
-    this.doSticky()
-  }
 }
 </script>
 
@@ -63,7 +49,9 @@ export default {
   align-items: center;
   padding: 15px 65px;
   flex-wrap: nowrap;
-
+  position: sticky;
+  top: 0%;
+  z-index: 10;
   * {
     position: relative;
     z-index: 4;
@@ -162,13 +150,6 @@ export default {
         height: 28px;
       }
     }
-  }
-
-  &.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 500;
   }
 
   &-brand {
