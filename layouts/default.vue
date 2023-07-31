@@ -19,11 +19,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 .layout {
   margin: 0;
   padding: 0;
-
   &.--default {
     min-height: 100vh;
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;

@@ -26,6 +26,7 @@
 </template>
 <script lang="ts">
 import NavigationLink from './NavigationLink.vue'
+
 export default {
   name: 'NavigationMenu',
   components: {

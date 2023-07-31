@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
 import PaginationBullet from './PaginationBullet.vue';
+
 const props = defineProps({
   pagesQty: { type: Number, required: true },
   current:{type: Number, default: 0}
@@ -27,5 +28,8 @@ const props = defineProps({
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
+  @media screen and (max-height:740px) {
+    display: none;
+  }
 }
 </style>

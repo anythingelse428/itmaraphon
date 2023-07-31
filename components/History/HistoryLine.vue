@@ -12,8 +12,9 @@
 </template>
 
 <script lang="ts" setup>
-import { throttle } from '../../utils/throttle';
 import { onMounted, ref } from 'vue'
+
+import { throttle } from '../../utils/throttle';
 import HistoryItem from './HistoryItem.vue'
 import PaginationNav from '../Pagination/PaginationNav.vue'
 
@@ -65,8 +66,8 @@ const currentYear = ref(1985)
 const currentPage = ref(0)
 function changeCurrentHistoryItem() {
   const options: IntersectionObserverInit = {
-    threshold: [0.9],
-    rootMargin: "-20% 0% -15% 0%",
+    threshold: [0],
+    rootMargin: "-45% 0% -45% 0%",
   };
   const updateCurrent = (
     entries: IntersectionObserverEntry[],
