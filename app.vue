@@ -1,12 +1,56 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <div class="loader">
   </div>
 </template>
 <style lang="scss">
 @import url('/assets/fonts/Manrope/style.css');
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 9999;
+  inset: 0;
+  width: 100vw;
+  background: #f9f9f9;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+
+  &::before {
+    display: block;
+    position: relative;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: #000;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    transform-origin: center center;
+    opacity: 1;
+    animation: pulse 2s 800ms infinite both;
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 0.6;
+      transform: scale(0.6);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
 
 * {
   margin: 0;
@@ -21,24 +65,25 @@
   }
 }
 
-
 body {
+  overflow: hidden;
+
   &::-webkit-scrollbar {
     width: 8px;
   }
 
-  /* Track */
   &::-webkit-scrollbar-track {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
+    background: -webkit-radial-gradient(50% 50%, 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), -webkit-linear-gradient(bottom, #121B3E 0%, #121B3E 100%), #FFF;
     background: radial-gradient(50% 50% at 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), linear-gradient(0deg, #121B3E 0%, #121B3E 100%), #FFF;
   }
 
-  /* Handle */
   &::-webkit-scrollbar-thumb {
     background: #dadada;
+    -webkit-border-radius: 5px;
     border-radius: 5px;
   }
 
-  /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
     background: #a7a7a7;
   }
@@ -46,9 +91,18 @@ body {
 </style>
 
 <script setup lang="ts">
-import {
-  useSchemaOrg, defineOrganization,
-} from '@unhead/schema-org'
+import { defineOrganization, useSchemaOrg } from '@unhead/schema-org';
+useNuxtApp().hook("page:finish", () => {
+  const $loader: HTMLDivElement = document.querySelector('.loader')!
+  const $body = document.querySelector('body')
+  if ($loader && $body) {
+    $loader.style.opacity = '0'
+    $loader?.addEventListener('transitionend', () => {
+      $loader.style.display = 'none'
+      $body.style.overflow = 'auto'
+    })
+  }
+});
 
 useSeoMeta({
   title: 'УавиаК-МЦК',
@@ -65,14 +119,31 @@ useHead({
 })
 useSchemaOrg([
   defineOrganization({
-    name: 'УавиаК-МЦК',
-    logo: '/logo.svg',
-    description: 'УАвиаК-МЦК — это современное учебное заведение, в котором качественному обучению способствуют комфортные условия, новейшее оборудование и богатый опыт педагогов.',
-    sameAs: [
-      'https://vk.com/uaviakmck'
-    ]
-  }),
-
+    "@context": "http://www.schema.org",
+    "@type": "EducationalOrganization",
+    "name": "УАвиаК-МЦК",
+    "url": "https://uaviak.ru/",
+    "sameAs": [
+      "https://vk.com/uaviakmck",
+      "https://anythingelse428.github.io/itmaraphon"
+    ],
+    "description": "ОГАПОУ УАвиаК-МЦК — это современное учебное заведение, в котором качественному обучению способствуют комфортные условия, новейшее оборудование и богатый опыт педагогов.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "пр-т. Созидателей, 13",
+      "addressLocality": "Ульяновск",
+      "addressRegion": "Ульяновская обл.",
+      "postalCode": "432059",
+      "addressCountry": "Россия"
+    },
+    "hasMap": "https://goo.gl/maps/nVxN56EtUkCM4QEU8",
+    "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su 07:00-18:00",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "88422584156"
+    }
+  })
 ])
 
 </script>
+

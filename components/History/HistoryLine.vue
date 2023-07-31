@@ -66,7 +66,7 @@ const currentYear = ref(1985)
 const currentPage = ref(0)
 function changeCurrentHistoryItem() {
   const options: IntersectionObserverInit = {
-    threshold: [0],
+    threshold: window.innerHeight > 740 ? 0.1 : 0,
     rootMargin: "-45% 0% -45% 0%",
   };
   const updateCurrent = (

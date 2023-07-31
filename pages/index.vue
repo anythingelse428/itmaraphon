@@ -12,12 +12,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import HistoryLine from '../components/History/HistoryLine.vue';
-export default {
-  name: "MainPage",
-  components: { HistoryLine }
-}
+
 </script>
 
 <style lang="scss" scoped>

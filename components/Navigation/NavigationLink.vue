@@ -16,21 +16,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .nav-link {
   color: $nav-link-color;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
-  -webkit-transition: all .1s;
-  -o-transition: all .1s;
-  -moz-transition: all .1s;
-  transition: all .1s;
+  -webkit-transition: all 200ms !important;
+  -o-transition: all 200ms !important;
+  -moz-transition: all 200ms !important;
+  transition: all 200ms !important;
   cursor: pointer;
 
   &:hover {
     color: #b7bbc4;
+    will-change: color;
   }
 
   @media screen and (max-width: 1200px) {

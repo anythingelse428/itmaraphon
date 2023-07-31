@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/', 
+    baseURL: process.env.MODE === 'DEV' ? '/' : process.env.BASE_URL,
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
@@ -27,6 +27,11 @@ export default defineNuxtConfig({
       ]
     }
   },
+  runtimeConfig: {
+    public: {
+      siteUrl: process.env.MODE === 'DEV' ? "http://localhost:3000" : `https://${process.env.GITHUB_NAME}.github.io${process.env.BASE_URL}`,
+    }
+  },
   nitro: {
     routeRules: {
       "/public/assets/**": { headers: { 'cache-control': 'public,max-age=3153600,s-maxage=3153600' } },
@@ -34,6 +39,8 @@ export default defineNuxtConfig({
     },
     compressPublicAssets: true,
   },
+  modules: ['nuxt-schema-org'],
+
   devtools: { enabled: false },
   vite: {
     css: {
@@ -43,5 +50,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+
 })
