@@ -32,18 +32,16 @@ export default defineNuxtConfig({
   },
   nitro: {
     routeRules: {
-      "/public/assets/**": { headers: { 'cache-control': 'public,max-age=1,s-maxage=1' } },
+      "/public/assets/**": { headers: { 'cache-control': 'public,max-age=31536000,s-maxage=31536000' } },
       "/_nuxt/**": { headers: { 'cache-control': "public,immutable,max-age=3153600,s-maxage=3153600" } }
     },
     compressPublicAssets: true,
   },
   devtools: { enabled: false },
   vite: {
-    plugins: [
-    ],
     server: {
       headers: {
-        "Cache-Control": "max-age=1, s-maxage=1"
+        "Cache-Control": "max-age=31536000, s-maxage=31536000"
       }
     },
     css: {
