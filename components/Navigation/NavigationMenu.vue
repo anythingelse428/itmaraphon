@@ -41,13 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 90 version
-*/
-
 .nav {
   background: rgba(17, 25, 56, 0.01);
   -webkit-backdrop-filter: blur(3.5px);

@@ -29,49 +29,52 @@
     </div>
   </section>
 </template>
-<script lang="ts">
-export default {
-  name: 'HistoryItem',
-  props: {
-    year: {
-      type: Number,
-      requred: true
-    },
-    shortDescripton: {
-      type: String,
-      requred: true
-    },
-    info: {
-      type: String,
-      requred: true
-    },
-    currentArea: {
-      type: Number,
-      default: 1985
-    },
-    isReversed: {
-      type: Boolean,
-      requred: true
-    }
+<script lang="ts" setup>
+import { onMounted, onUnmounted, ref, computed } from 'vue'
+const props = defineProps({
+  year: {
+    type: Number,
+    requred: true
   },
-  data() {
-    return {
-      itemHeight: 0,
-      isDesktop: true
-    }
+  shortDescripton: {
+    type: String,
+    requred: true
   },
-  mounted() {
-    this.isDesktop = window.innerWidth > 1350
-    addEventListener('resize', () => {
-      this.isDesktop = window.innerWidth > 1350
-    })
+  info: {
+    type: String,
+    requred: true
   },
-  computed: {
-    isCurrent() {
-      return this.currentArea == this.year
-    },
+  currentArea: {
+    type: Number,
+    default: 1985
+  },
+  isReversed: {
+    type: Boolean,
+    requred: true
   }
-}
+})
+
+const isDesktop = ref(true)
+onMounted(() => {
+  isDesktop.value = window.innerWidth > 1350
+  window.addEventListener('resize', () => {
+    isDesktop.value = window.innerWidth > 1350
+  })
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', () => {
+    isDesktop.value = window.innerWidth > 1350
+  })
+})
+const isCurrent = computed({
+  get(): boolean {
+    return props.currentArea === props.year
+  },
+  set(): boolean {
+    return props.currentArea === props.year
+  }
+})
+
 </script>
 
 <style lang="scss" scoped>
@@ -97,10 +100,10 @@ export default {
   margin-bottom: 24px;
 
   * {
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
     color: $history-item-color;
     position: relative;
     z-index: 4;

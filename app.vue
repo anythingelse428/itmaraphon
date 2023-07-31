@@ -6,7 +6,7 @@
   </div>
 </template>
 <style lang="scss">
-// @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+@import url('/assets/fonts/Manrope/style.css');
 
 * {
   margin: 0;

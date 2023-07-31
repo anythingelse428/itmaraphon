@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
   app: {
     baseURL: process.env.MODE === 'DEV' ? '/' : '/itmaraphon/',// baseURL: '/<repository>/'
     head: {
@@ -12,9 +13,6 @@ export default defineNuxtConfig({
         { rel: 'icon', type: "image/png", sizes: "16x16", href: 'favicon-16x16.png' },
         { rel: 'manifest', href: 'site.webmanifest' },
         { rel: 'mask-icon', color: "#5bbad5", href: 'safari-pinned-tab.svg' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: "anonymous" },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap' },
       ],
       noscript: [
         { children: 'JavaScript в вашем браузере отключен, пожалуйста, включите JavaScript или зайдите через другой браузер' }
@@ -32,18 +30,13 @@ export default defineNuxtConfig({
   },
   nitro: {
     routeRules: {
-      "/public/assets/**": { headers: { 'cache-control': 'public,max-age=31536000,s-maxage=31536000' } },
+      "/public/assets/**": { headers: { 'cache-control': 'public,max-age=3153600,s-maxage=3153600' } },
       "/_nuxt/**": { headers: { 'cache-control': "public,immutable,max-age=3153600,s-maxage=3153600" } }
     },
     compressPublicAssets: true,
   },
   devtools: { enabled: false },
   vite: {
-    server: {
-      headers: {
-        "Cache-Control": "max-age=31536000, s-maxage=31536000"
-      }
-    },
     css: {
       preprocessorOptions: {
         scss: {
