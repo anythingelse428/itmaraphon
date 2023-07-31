@@ -6,15 +6,10 @@
 
 <script lang="ts" setup>
 import PaginationBullet from './PaginationBullet.vue';
-import { ref } from 'vue'
 const props = defineProps({
   pagesQty: { type: Number, required: true },
+  current:{type: Number, default: 0}
 })
-const current = ref(Number(useRoute().hash.replace('#page', '')))
-onBeforeRouteUpdate((newRoute) => {
-    current.value = Number(newRoute.hash.replace('#page', ''))
-})
-
 </script>
 
 <style lang="scss" scoped>

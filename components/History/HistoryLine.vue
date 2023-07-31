@@ -1,7 +1,7 @@
 <template>
   <div class="history" v-if="history[0]?.info.length > 0">
     <div class="history__pagination">
-      <PaginationNav :pagesQty="history.length" />
+      <PaginationNav :pagesQty="history.length" :current="currentPage" />
     </div>
     <div class="history__row">
       <HistoryItem v-for="item in history" :key="item.id" :year="item.year" :short-descripton="item.shortDescription"
@@ -81,7 +81,6 @@ export default {
           entries.forEach((entry) => {
             const target = entry.target;
             if (entry.isIntersecting) {
-              useRouter().replace({ hash: "#" + target.id.replace("_", "") });
               this.currentYear = Number(target.getAttribute("aria-label"));
               this.currentPage = Number(
                 target.id.replace("page_", "")

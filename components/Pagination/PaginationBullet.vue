@@ -20,7 +20,6 @@ export default {
       const $item: HTMLDivElement = document.querySelector('#page_' + id)!
       const itemHeight = Number($item?.clientHeight)
       const itemY = Number($item?.getBoundingClientRect().y)
-      useRouter().replace({ hash: '#page' + this.order })
       if (itemY && itemHeight && $item) {
         window.scrollTo({
           top: ($item?.getBoundingClientRect().y + window.scrollY - (itemHeight / 1.2)),
