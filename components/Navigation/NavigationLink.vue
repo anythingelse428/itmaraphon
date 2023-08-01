@@ -3,16 +3,13 @@
     <slot />
   </NuxtLink>
 </template>
-<script lang="ts">
-export default {
-  name: 'NavigationLink',
-  props: {
-    link: {
-      type: String,
-      default: '#'
-    },
-  }
-}
+<script lang="ts" setup>
+const props = defineProps({
+  link: {
+    type: String,
+    default: '#'
+  },
+})
 </script>
 
 <style lang="scss" scoped>

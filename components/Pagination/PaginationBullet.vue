@@ -38,7 +38,6 @@ const isActive = computed({
 
 <style lang="scss" scoped>
 .pagination-bullet {
-
   width: 24px;
   height: 24px;
   display: -webkit-box;

@@ -182,13 +182,13 @@ const isCurrent = computed({
           margin-right: 20px;
           margin-left: 0px;
         }
-
         .svg {
           right: -2px;
-          -webkit-transform: rotateY(180deg);
-          -moz-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-          will-change: transform;
+          -webkit-transform: scaleX(-1);
+          -moz-transform: scaleX(-1);
+          -ms-transform: scaleX(-1);
+           -o-transform: scaleX(-1);
+              transform: scaleX(-1);
         }
       }
 
@@ -214,7 +214,7 @@ const isCurrent = computed({
           }
         }
 
-        .--sub {
+        &.--sub {
           -webkit-box-orient: horizontal !important;
           -webkit-box-direction: normal !important;
           -webkit-flex-direction: row !important;

@@ -24,28 +24,16 @@
     </div>
   </nav>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import NavigationLink from './NavigationLink.vue'
-
-export default {
-  name: 'NavigationMenu',
-  components: {
-    NavigationLink
-  },
-  data() {
-    return {
-      isOpened: false
-    }
-  },
-
-}
+const isOpened = ref(false)
 </script>
 
 <style lang="scss" scoped>
 .nav {
   background: rgba(17, 25, 56, 0.01);
   -webkit-backdrop-filter: blur(3.5px);
-          backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -54,30 +42,31 @@ export default {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-     -moz-box-orient: horizontal;
-     -moz-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 15px 65px;
   -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   position: -webkit-sticky;
   position: sticky;
   top: 0%;
   z-index: 10;
+
   * {
     position: relative;
     z-index: 4;
-    -webkit-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -o-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    -moz-transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-transition: all .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-transition: all .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -moz-transition: all .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: all .35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
   &-toggler {
@@ -107,9 +96,9 @@ export default {
     padding: 15px 90px 15px 90px;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
     &-toggler {
       display: block;
@@ -139,28 +128,28 @@ export default {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
-           -moz-box-orient: vertical;
-           -moz-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: start;
         -webkit-align-items: flex-start;
-           -moz-box-align: start;
-            -ms-flex-align: start;
-                align-items: flex-start;
+        -moz-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         -webkit-align-content: flex-start;
-            -ms-flex-line-pack: start;
-                align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
         -webkit-box-pack: start;
         -webkit-justify-content: flex-start;
-           -moz-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
+        -moz-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         gap: 42px 25%;
         height: 14em;
         -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
       }
 
       &:not(.active) {
@@ -219,15 +208,15 @@ export default {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
     -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 64px;
 
     @media screen and (max-width:1550px) {
@@ -237,7 +226,7 @@ export default {
     @media screen and (max-width: 1350px) {
       gap: 18px;
     }
-   
+
   }
 
   &-tools {
@@ -249,15 +238,15 @@ export default {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-       -moz-box-orient: horizontal;
-       -moz-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: center;
     -webkit-align-items: center;
-       -moz-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 35px;
     margin-left: auto;
     z-index: 7;

@@ -112,6 +112,7 @@ onUnmounted(() => {
 </script>
 
 <style lang="scss" scoped>
+
 .history {
   padding-bottom: 30vh;
   display: -webkit-box;

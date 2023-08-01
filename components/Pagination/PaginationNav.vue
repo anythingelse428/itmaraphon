@@ -6,10 +6,9 @@
 
 <script lang="ts" setup>
 import PaginationBullet from './PaginationBullet.vue';
-
 const props = defineProps({
   pagesQty: { type: Number, required: true },
-  current:{type: Number, default: 0}
+  current: {type: Number, default: 0}
 })
 </script>
 

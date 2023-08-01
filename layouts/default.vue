@@ -25,6 +25,9 @@ export default {
 
   &.--default {
     min-height: 100vh;
+    background: -webkit-radial-gradient(50% 50.00%, 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
+    background: -moz-radial-gradient(50% 50.00%, 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
+    background: -o-radial-gradient(50% 50.00%, 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
     background: -webkit-radial-gradient(50% 50.00%, 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -webkit-linear-gradient(bottom, #121B3E 0%, #121B3E 100%), #FFF;
     background: -moz-radial-gradient(50% 50.00%, 50% 50.00%, rgba(18, 27, 62, 0.00) 0%, rgba(8, 12, 21, 0.50) 100%), -moz-linear-gradient(bottom, #121B3E 0%, #121B3E 100%), #FFF;
@@ -45,6 +48,7 @@ export default {
       }
 
       &::-webkit-scrollbar-track {
+        background: -webkit-radial-gradient(50% 50%, 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
         background: radial-gradient(50% 50% at 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), -webkit-gradient(linear, left bottom, left top, from(#121B3E), to(#121B3E)), #FFF;
         background: -webkit-radial-gradient(50% 50%, 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), -webkit-linear-gradient(bottom, #121B3E 0%, #121B3E 100%), #FFF;
         background: radial-gradient(50% 50% at 50% 50%, rgba(18, 27, 62, 0) 0%, rgba(8, 12, 21, 0.5) 100%), linear-gradient(0deg, #121B3E 0%, #121B3E 100%), #FFF;
