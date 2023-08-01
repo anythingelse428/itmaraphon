@@ -38,7 +38,6 @@ import NavigationMenu from '../components/Navigation/NavigationMenu.vue';
     @media screen and (min-width: 1000px) {
       &::-webkit-scrollbar {
         width: 8px;
-        width: 4px;
       }
 
       &::-webkit-scrollbar-track {
