@@ -99,7 +99,7 @@ const isCurrent = computed({
   align-items: center;
   position: relative;
   margin-bottom: 24px;
-
+ 
   * {
     -webkit-transition: all 400ms ease-in-out;
     -o-transition: all 400ms ease-in-out;

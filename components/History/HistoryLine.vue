@@ -98,6 +98,14 @@ function changeCurrentHistoryItem() {
 }
 onMounted(() => {
   changeCurrentHistoryItem();
+  window.addEventListener('resize', () => {
+    changeCurrentHistoryItem();
+  })
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', () => {
+    changeCurrentHistoryItem();
+  })
 })
 
 

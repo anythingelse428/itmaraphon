@@ -21,9 +21,8 @@ function scrollTo(id: number) {
   const itemHeight = Number($item?.clientHeight)
   const itemY = Number($item?.getBoundingClientRect().y)
   if (itemY && itemHeight && $item) {
-    window.scrollTo({
-      top: ($item?.getBoundingClientRect().y + window.scrollY - (itemHeight / 1.2)),
-    })
+    $item.style.scrollMarginTop = itemHeight / 1.5 + 'px'
+    $item.scrollIntoView({ block: "start", behavior: "smooth" })
   }
 }
 const isActive = computed({
