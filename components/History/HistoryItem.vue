@@ -386,7 +386,7 @@ const isCurrent = computed({
 
   &__header {
     margin-bottom: 32px;
-
+    z-index: 6;
     @media screen and (max-width:1000px) {
       margin-bottom: 24px;
     }
