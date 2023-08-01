@@ -600,10 +600,9 @@ const isCurrent = computed({
       font-size: 12px;
       font-weight: 400;
       line-height: 12px;
-      top: 3em;
-      width: -webkit-calc(100% - 20px - 74px);
-      width: -moz-calc(100% - 20px - 74px);
-      width: calc(100% - 20px - 74px);
+      top: 2.4em;
+      width:100%;
+      margin-left: 0;
     }
   }
 
