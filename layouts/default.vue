@@ -1,6 +1,5 @@
 <template>
   <div class="layout --default">
-
     <NavigationMenu />
     <main class="container">
       <slot />
@@ -10,13 +9,8 @@
 </template>
 
 
-<script lang="ts">
+<script lang="ts" setup>
 import NavigationMenu from '../components/Navigation/NavigationMenu.vue';
-export default {
-  components: {
-    NavigationMenu
-  }
-}
 </script>
 <style lang="scss" scoped>
 .layout {
