@@ -2,17 +2,16 @@
   <section
     :class="(isCurrent ? '--current' : '--muted') + (isReversed && isDesktop ? ' --reversed' : '') + ' history-item'">
     <div class="history-item__header">
-      <div class="history-item__year">
+      <h1 class="history-item__year">
         {{ year }}
-      </div>
-      <div class="history-item__description">
+      </h1>
+      <h2 class="history-item__description">
         {{ shortDescripton }}
-      </div>
+      </h2>
     </div>
     <div class="history-item__step" ref="start">
       <div class="small-light"></div>
       <div class="big-light"></div>
-
     </div>
     <div class="history-item__line">
       <div class="history-item__line --main">
