@@ -1,12 +1,12 @@
 <template>
   <div class="mainpage">
-    <div class="hero">
+    <section class="hero">
       <h1 class="hero__title">ОГАПОУ «УАвиаК-МЦК»</h1>
       <h2 class="hero__description">
         Областное государственное автономное профессиональное образовательное учреждение «Ульяновский авиационный колледж
         — Межрегиональный центр компетенций»
       </h2>
-    </div>
+    </section>
     <HistoryLine />
 
   </div>

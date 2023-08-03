@@ -31,9 +31,6 @@ const isOpened = ref(false)
 
 <style lang="scss" scoped>
 .nav {
-  background: rgba(17, 25, 56, 0.01);
-  -webkit-backdrop-filter: blur(3.5px);
-  backdrop-filter: blur(3.5px);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -56,9 +53,6 @@ const isOpened = ref(false)
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   position: -webkit-sticky;
-  position: sticky;
-  top: 0%;
-  z-index: 10;
 
   * {
     position: relative;
