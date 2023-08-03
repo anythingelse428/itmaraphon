@@ -1,8 +1,6 @@
 <template>
   <div class="layout --default">
-    <header>
       <NavigationMenu />
-    </header>
     <main class="container">
       <slot />
     </main>
@@ -58,15 +56,6 @@ import NavigationMenu from '../components/Navigation/NavigationMenu.vue';
       &::-webkit-scrollbar-thumb:hover {
         background: #a7a7a7;
       }
-    }
-
-    header {
-      position: sticky;
-      z-index: 10;
-      top: 0%;
-      background: rgba(17, 25, 56, 0.01);
-      -webkit-backdrop-filter: blur(3.5px);
-      backdrop-filter: blur(3.5px);
     }
 
     .container {
